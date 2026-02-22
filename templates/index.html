@@ -14,9 +14,12 @@
                 {{ content | safe }}
             </div>
         </header>
-
-        {% if sections %}
+        <div class="all-reviews-link">
+            <h2>Reseñas</h2>
+            <a href="./all_reviews.html">Todas las reseñas</a>
+        </div>
         <section class="section-groups">
+        {% if sections %}
             <h2>Senderos</h2>
             {% for section in sections %}
             <article class="section-block">
@@ -27,11 +30,6 @@
             </article>
             {% endfor %}
         {% endif %}
-
-            <nav class="all-reviews-link">
-                <h2>Reseñas</h2>
-                <a href="./all_reviews.html">Todas las reseñas</a>
-            </nav>
         </section>
     </main>
 </body>
