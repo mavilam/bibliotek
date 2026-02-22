@@ -1,0 +1,19 @@
+---
+title: "Soldados de Salamina"
+author: "Javier Cercas"
+year_published: 2001
+date_read: 2023-06-16
+rating: 5
+pages: 216
+tags: []
+---
+
+Siguiendo con mi etapa de obsesión con Roberto Bolaño, cogí este libro, un eterno pendiente, sabiendo que, en la última parte del libro, Bolaño tenía un papel determinante. Obvio que he disfrutado ese episodio en el que los dos escritores conversan, pero es que todo el libro es de una calidad muy alta. 
+
+Compuesto de tres partes, donde la segunda es el relato histórico de Sánchez Mazas, lo que da empaque, y lo que más he disfrutado, son las dos crónicas de como el autor se pone en la pista de la historia del relato y como busca a cerrar el libro.
+
+La historia del fusilamiento de Sánchez Mazas, efectivamente es muy novelesca como se comenta en la primera parte. Pero hay muchos puntos interesantes sobre el personaje más allá del fusilamiento: con qué propósito se constituyó la Falange, con el deseo de una España bien diferente a lo que sería posteriormente la España franquista ("La Falange en una amalgama brillante, demagógica e imposible mezclaba la preservación de ciertos valores tradicionales y la urgencia de cambios profundos en la estructura social y económica del país.") y quiénes, gente culta ("[...] vio en Benito Mussolini la reencarnación de los condotieros renacentistas y en su ascensión al poder el anuncio de que el tiempo de los héroes y los poetas había vuelto a Italia") que avivaron el fuego del alzamiento desde un lugar de gente privilegiada de letras. Como punto curioso, me llamó la atención la cantidad de relaciones personales que tenían los dirigentes republicanos y dirigentes del bando nacional, por ejemplo Sánchez Mazas, uno de los fundadores de la Falange, e Indalecio Prieto, hasta el punto de interceder por él en varias ocasiones.
+
+ Durante el relato, desdibuja la idea maniquea de la guerra civil española, donde para nada todo el país tenía una clara ideología o un bando al que pertenecer. Mucha gente ignoraba la fuente del conflicto y solo veía miseria en la guerra. Otros tantos simplemente hacían cambios de bando. 
+
+ El último bloque, Javier Cercas hace honor a toda esa gente que luchó por una España que era una república democrática, pero que al acabar la guerra se quedaron sin patria, sin amigos, sin familia y sin reconocimiento, contando la historia de Miralles, soldado que combatió durante 7 años seguidos en la guerra civil y, seguidamente, en la segunda guerra mundial. Gente olvidada, que tuvo que huir toda su vida, mientras que otros, como Sánchez Mazas, cobardes y, en parte, causantes de que España acabara destrozada, tienen su nombre en las calles de multitud de municipios de nuestro país.

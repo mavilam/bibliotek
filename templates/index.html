@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotek</title>
+    <link rel="stylesheet" href="{{ css_path }}">
+</head>
+<body>
+    <main>
+        <header class="page-header">
+            <h1>{{ title }}</h1>
+            <div class="content">
+                {{ content | safe }}
+            </div>
+        </header>
+
+        {% if sections %}
+        <section class="section-groups">
+            <h2>Senderos</h2>
+            {% for section in sections %}
+            <article class="section-block">
+                <h3><a href="{{ section.path }}">{{ section.name }}</a></h3>
+                {% if section.topic %}
+                <p class="section-topic">{{ section.topic }}</p>
+                {% endif %}
+            </article>
+            {% endfor %}
+        {% endif %}
+
+            <nav class="all-reviews-link">
+                <h2>Reseñas</h2>
+                <a href="./all_reviews.html">Todas las reseñas</a>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>

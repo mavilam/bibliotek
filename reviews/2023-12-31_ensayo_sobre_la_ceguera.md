@@ -1,0 +1,18 @@
+---
+title: "Ensayo sobre la ceguera"
+author: "José Saramago"
+year_published: 1995
+date_read: 2023-12-31
+rating: 4
+pages: 329
+tags: []
+---
+
+Ensayo sobre la ceguera comienza con un hombre perdiendo el sentido de la vista y siendo sustituido por una imagen estática blanca. A este hombre le ayuda otro a llegar a casa y, una vez allí, decide ir al oftalmólogo para intentar saber qué le pasa. Cuando su mujer busca el coche se da cuenta de que el buen samaritano resulta ser un ladrón. El día siguiente, tanto el médico como el ladrón también están ciegos y los tres son trasladados a un pabellón de aislamiento junto a la mujer del médico, que sí puede ver.
+
+Para mí, en este punto acaba la parte propiamente novelesca del libro. De aquí en adelante, Saramago se dedica a crear conflictos de todo tipo para hacer un estudio moral del comportamiento del ser humano. Con ese objetivo, todas las situaciones a las que se enfrentan los personajes no tienen respuesta fácil ni una solución que contente a todos. En todas ellas hay alguien que va a perder y alguien que va a ganar y en todas ellas vemos aflorar las diferentes naturalezas del ser humano; así hay personas que vuelven a la ley del más fuerte para imponer su opinión y hay gente orientada al bien común.
+Entre todos los ciegos hay una persona que sobresale como el faro de Alejandría: la mujer del médico. Ella no pierde la vista en ningún momento, pero tampoco pierde la cabeza ni los nervios, es justa y razonable en todo momento. Es el punto de referencia de todo el mundo, sin este personaje no tendría sentido el análisis porque la convivencia sería el lejano oeste; sin un ejemplo de conducta, no te avergüenzas de tus malos actos.
+
+Saramago compone los personajes basándose en arquetipos, los cuales no sirven solo para dar una base de caracterización a estos, sino para asignarles una manera de identificarlos, ya que no llegan a tener un nombre propio como tal. El médico podría ser otra persona, pero el rasgo más importante de su personalidad es que es médico, al igual que el viejo o el niño. Todos estos rasgos se van desdibujando según avanza la epidemia, porque todos los personajes convergen a un mismo tipo de persona, porque todos los rasgos que les caracterizaban no son importantes, pertenecen a un mundo anterior que ya no existe. Además, el propio autor (o alguien que está contado la historia) se muestra como narrador de la obra, lo que me dio una sensación mayor aún de que está exponiendo un texto para reflexionar sobre él en lugar de una simple narración.
+
+Una vez que se han expuesto todo tipo de dilemas y reacciones a estos, la epidemia se va como ha venido. Es un gran libro para leer a la vez que otras personas porque da mucho jugo para tener una tertulia. Pero cuidado, hay algunos dilemas que quizá lleven a conflicto la reunión.

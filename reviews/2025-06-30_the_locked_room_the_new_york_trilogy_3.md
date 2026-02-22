@@ -1,0 +1,21 @@
+---
+title: "The Locked Room (The New York Trilogy, #3)"
+author: "Paul Auster"
+year_published: 1986
+date_read: 2025-06-30
+rating: 3
+pages: 179
+tags: []
+---
+
+Después de leer _Ciudad de cristal_ y _Ghost_, me acerqué al último libro de la _Trilogía de Nueva York_ de Paul Auster como cuando voy a ver una película de David Lynch: tengo la intuición de que me va a gustar, pero sé que voy a salir con muchas dudas.
+
+En _La habitación cerrada_, un narrador anónimo se embarca en la tarea de lidiar con la herencia literaria de su amigo de la infancia, Fanshawe, quien ha desaparecido misteriosamente, dejándole como heredero de sus textos.
+
+La relación entre ambos personajes es el núcleo de la novela: Fanshawe marcó toda la infancia y adolescencia del narrador, era el espejo en el que se miraba y su objetivo en cada cosa que se proponía. Aparentemente, el narrador logró independizarse en la vida adulta, pero, tras comenzar la tarea que le dejó Fanshawe, se da cuenta de que, en realidad, vivía sin propósitos genuinos hasta que su amigo desapareció y conoció a su esposa. Es entonces cuando vuelve a sentirse vivo, pero construyendo una identidad basada en lo que Fanshawe dejó atrás.
+
+Como en los libros anteriores de la trilogía, uno empieza a preguntarse: ¿quién es realmente el protagonista? ¿El narrador o Fanshawe? Aquí entra en juego un espejo distorsionado, donde el observador se transforma en lo observado. El narrador, que inicialmente parecía estable, se desintegra hasta convertirse en un desquiciado que persigue a su antiguo amigo por todos lados en busca de respuestas. 
+
+Auster logra que el lector tenga que interpretar constantemente las motivaciones reales de los personajes, ya que nada es explícito y todo es interpretable. El libro está escrito en un estilo que se mueve entre lo detectivesco y lo filosófico, usando la primera persona para meternos de lleno en la cabeza del protagonista mientras pierde la razón. Como en los dos anteriores, da la sensación de que el autor no busca respuestas concretas, sino explorar los conceptos de identidad, motivación e incluso estabilidad mental. Aunque tengo que reconocer que esta entrega es la más cerrada de las tres de la trilogía.
+
+Como cierre, los guiños a las novelas anteriores (especialmente el Cuaderno rojo) son una grata sorpresa para quien ha leído la trilogía completa. En realidad, me queda la duda de si son tres libros o uno solo, unido por el concepto de locura e identidad.

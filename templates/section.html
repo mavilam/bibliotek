@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} — Bibliotek</title>
+    <link rel="stylesheet" href="{{ css_path }}">
+</head>
+<body>
+    <main>
+        <nav class="homie"><a href="../index.html">inicio</a></nav>
+        <section class="section-block">
+            <h1>{{ title }}</h1>
+            {% if topic %}
+            <p class="section-topic">{{ topic }}</p>
+            {% endif %}
+
+            {% if content %}
+            <div class="content">
+                {{ content | safe }}
+            </div>
+            {% endif %}
+
+            {% if dir_reviews %}
+            <div class="book-list">
+                {% for review in dir_reviews %}
+                <figure class="book-item">
+                    <span class="book-title"><a href="./{{ review.path }}">{{ review.title }}</a></span>
+                    <span class="book-author">por {{ review.author }}</span>
+                    <span class="book-date">{{ review.date_read }}</span>
+                </figure>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

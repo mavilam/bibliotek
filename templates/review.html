@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} — Bibliotek</title>
+    <link rel="stylesheet" href="{{ css_path }}">
+</head>
+<body>
+    <article>
+        <nav class="homie"><a href="../index.html">inicio</a></nav>
+        <h1>{{ title }}</h1>
+        <div class="meta">
+            <span>{{ author }}</span>
+            <span>{{ date_read }}</span>
+            <span>{{ year_published }}</span>
+            <span class="rating">{% for i in range(end=rating) %}★{% endfor %}{% for i in range(end=5 - rating) %}☆{% endfor %}</span>
+        </div>
+        <div class="tags">
+            {% for tag in tags %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <div class="content">
+            {{ content | safe }}
+        </div>
+    </article>
+</body>
+</html>

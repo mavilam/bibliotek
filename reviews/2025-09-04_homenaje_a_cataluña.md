@@ -1,0 +1,26 @@
+---
+title: "Homenaje a Cataluña"
+author: "George Orwell"
+year_published: 1938
+date_read: 2025-09-04
+rating: 4
+pages: 200
+tags: 
+ - "guerra civil"
+ - "no ficción"
+ - "memorias"
+---
+
+George Orwell llegó a España a finales de 1936, en pleno desarrollo de la guerra civil, inicialmente como corresponsal del periódico británico New Statesman. Sin embargo, al presenciar la magnitud de lo que estaba en juego, no pudo mantenerse al marge y decidió alistarse en las milicias del POUM (Partido Obrero de Unificación Marxista) para luchar en el frente. Homenaje a Cataluña, publicado en 1938, es el resultado de los diarios de guerra y los recuerdos que el autor plasmó inmediatamente después de regresar de España, tras ser herido y apartado del frente.
+
+El libro tiene en dos partes fundamentales que reflejan la evolución tanto de la guerra como de la propia experiencia del autor. La primera parte narra vívidamente su entrenamiento militar con las milicias, la espectacular atmósfera que vivía Barcelona durante los primeros meses de la revolución, donde la clase obrera había tomado el control de la ciudad y a todo el mundo se le trataba por igual, y su posterior experiencia en las trincheras del frente de Aragón.
+
+La segunda parte se centra en los eventos de mayo de 1937 en Barcelona, cuando estalló el conflicto interno entre las diferentes fuerzas del bando republicano. Orwell describe minuciosamente (no se guarda nada para él) cómo el gobierno republicano, cada vez más dominado por el Partido Comunista y la influencia soviética, emprendió una cruzada contra el POUM y otros grupos de izquierda no alineados, llegando a ilegalizar el partido.
+
+Para mí, lo más interesante del libro es su capacidad para mostrar la guerra desde la perspectiva de quienes la vivieron en primera persona. Orwell cuenta como ningún bando disponía de armamento moderno o recursos, todo era improvisado, reutilizado y de calidad deficiente. Sus descripciones están llenas de la escasez de municiones, la precariedad del equipo y las condiciones inhumanas en las trincheras .
+
+Es reseñable también su análisis de las divisiones internas del bando republicano. Mientras miles de obreros y milicianos combatían  en el frente, Barcelona se estaba llena de conflictos internos que terminarían debilitando fatalmente la causa antifascista.
+
+Pero lo que más me ha gustado del libro, definitivamente, es la manera en que Orwell describe a los españoles: campechanos, generosos, profundamente desorganizados y con un un alijo inagotable de aceite de oliva que les llevaba a usarlo para todo, desde combustible para lámparas hasta lubricante para los fusiles. 
+
+El libro no es sólo un buen testimonio de la guerra civil, es un diario donde se muestra el porqué y el cómo del cambio de pensamiento político de uno de los grandes escritores del siglo XX.

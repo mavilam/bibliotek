@@ -1,0 +1,23 @@
+---
+title: "El ritmo de la guerra  (El archivo de las tormentas, #4)"
+author: "Brandon Sanderson"
+year_published: 2020
+date_read: 2023-10-26
+rating: 2
+pages: 1424
+tags: []
+---
+
+Está claro que Brandon Sanderson tiene grandes virtudes que le han llevado a ser uno de los escritores de fantasía épica más leídos actualmente. Entre ellas están la capacidad de crear universos, que no mundos, desde cero, con millones de detalles, y la capacidad de escribir finales que te generan un ansia por la que no puedes dejar el libro hasta acabarlo. Sin embargo, de los que he leído, este es su peor libro con diferencia.
+
+Dos puntos importantes. Primero, durante la reseña, voy a hacer algunas comparativas con otros de sus libros, pero solo de la saga de El archivo de las tormentas, que es lo único que he leído. Segundo, creo que no soy el lector objetivo del autor, no soy un fan acérrimo ni quiero leer todos los libros del Cosmere.
+
+Lo primero que se me vino a la mente, después de leer unas horas el libro, es que un problema que tienen el resto de libros de la saga, aquí se acentúa gravemente: falta edición. Hay cantidad de páginas que sobran, que no dicen nada nuevo, que no sepamos ya. Brandon deja que su pluma vuele y vomita todo lo que tiene en la cabeza, estos flecos deberían cortarse en el proceso de edición, pero no pasa. Puedes soportarlo, incluso que te parezca interesante, en El camino de los reyes, al ser el primero de la saga y estar deseoso de conocer más sobre Roshar, pero aquí se hace tedioso.
+
+Relacionado con el punto anterior, me da la sensación que hay tantas incógnitas en el Cosmere que el resto de cosas mundanas de la vida de los personajes se nos tiene que explicar en todo su totalidad, no hay libertad de pensamiento o de interpretación. Todo está puesto en la boca de los personajes como si un villano de James Bond se tratara. Por otra parte, entiendo que haya gente que quiera saber hasta el más mínimo detalle como funciona algo, pero personalmente no me interesa. Sacaría estas descripciones enormes a un anexo o algo símilar (véase el funcionamiento de la máquina con la que vuelan al inicio del libro). Sin estas descripciones, la trama fluiría más.
+
+Me cansa que el personaje de Shallan y el de Kaladin sean maltratados prácticamente de la misma manera desde el primer libro. Su sufrimiento prácticamente no varía, Kaladin sigue cayendo en depresión por las mismas razones y su estado, casi comatoso, es exactamente el mismo hasta que se convierte en el protagonista de un anime y salva a todos de manera milagrosa. Llego hasta a cogerle tirria. Sobre Shallan, me parece excesivo el dramatismo profundo con el que se trata al conflicto de identidad.
+
+Hay una mala estructura de la narración, hay varias tramas que siguen a grupos de personajes. Aparcar durante un cuarto del libro una de las tramas no me parece la mejor manera de llevarlas, sobre todo cuando la aparcada es la más interesante, que en el momento de retomarse te sorprende, ya que casi te habías olvidado de ella. Además, hay una gran cantidad de conveniencias narrativas, hay muchos momentos que hacen avanzar la trama que se dan de manera totalmente casual (por ejemplo, Dalinar volando con el padre tormenta justo justo justo pasa por Urithiru cuando Kaladin está a punto de caerse).
+
+Con todo y con eso, hay un porcentaje del libro que es muy disfrutable, tanto el inicio como el final, aun siendo más flojo que los anteriores, se leen muy ágilmente. Porque hay destino en este libro y claro que es interesante, Taravangian convirtiéndose en Odium, Navani siendo radiante, conocer que los cantores también eran radiantes... Es interesante y disfrutable, pero el camino hasta ese destino está empedrado con cientos de páginas con poca sustancia. Habiendo hecho una poda importante de páginas, sería un gran libro si lo valoramos dentro de la saga. Mi problema es que lo malo pesa más que lo bueno.

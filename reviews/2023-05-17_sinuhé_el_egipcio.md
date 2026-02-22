@@ -1,0 +1,13 @@
+---
+title: "Sinuhé, el egipcio"
+author: "Mika Waltari"
+year_published: 1945
+date_read: 2023-05-17
+rating: 4
+pages: 736
+tags: []
+---
+
+Mika Waltari escribe una novela histórica en la que pinta, con todo lujo de detalle, Egipto, Creta, Babilonia y otras zonas colindantes de una manera que, al terminar, sientes que conoces a sus dioses, su gente, incluso sus costumbres. El estilo de escritura me ha sorprendido grátamente, recordándome mucho al de las ediciones que he leído de libros como La Odisea o la Ilíada, haciendo muy verosímil la narración de una época tan lejana. Tiene pasajes más parecidos a fábulas o relatos con moralej,a como la historia con Nefernefernefer o la venganza de Baketamon. Por otra parte, los personajes tienen unos sentimientos muy modernos, la repulsión por la guerra o la defensa de la igualdad entre ciudadanos, pero aunque Sinuhé sea un médico con mucha sabiduría y no crea que todos los hilos del mundo los mueven los dioses, si cree en algunas divinidades como que el destino está en las estrellas o la aparición de Horemheb, enviado por Horus, que le da ese punto de autenticidad.
+
+Empezando la novela sin prácticamente ningún conocimiento sobre Egipto, me ha agradado que la novela me ubicara a nombres que resonaban en mi cabeza por cultura pop más que otra cosa como Nefertiti o Tutankamón. Mentiría si dijera que no he estado bastante tiempo en Wikipedia mirando quién era pariente de quién. El libro me ha abierto la puerta de la curiosidad por un imperio que, para mí, estaba oculto tras Grecia y Roma.

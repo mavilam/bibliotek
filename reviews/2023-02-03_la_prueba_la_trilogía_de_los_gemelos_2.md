@@ -1,0 +1,17 @@
+---
+title: "La prueba (La trilogía de los gemelos, #2)"
+author: "Ágota Kristóf"
+year_published: 1988
+date_read: 2023-02-03
+rating: 4
+pages: 160
+tags: []
+---
+
+Claus se ha ido. Lucas está solo. Por lo que este pierde la voz, y el libro pasa a estar contado en tercera persona. Pero, ¿De verdad se ha ido o siempre han sido uno en realidad? Durante gran parte del libro me queda esta duda, que coge más fuerza en los capítulos finales. A pesar de estar escrito con otro tipo de narrador, continúa con su estilo de escritura directo, prácticamente sin adjetivar, dando muchísima importancia a los diálogos.
+
+Durante todo el libro vemos un desfile de personajes destrozados, de una manera o de otra, por la guerra y sus posteriores consecuencias políticas. Sobretodo se pone foco en personas que han perdido a sus seres queridos y que sin ellos no saben seguir viviendo de la misma manera que lo hacían antes.
+
+El personaje de Mathías es un gran punto de la novela, un niño con deformidades con una visión cristalina de la situación que vive, que hereda la manera de ser de los gemelos en la primera novela: inteligente y con su propia moral.
+
+Habiendo leído el primero y viendo el final de este, cerrar libros dejándote con ganas de más y un poco descolocado, parece que es algo que es marca de la casa de la autora.

@@ -1,0 +1,12 @@
+[package]
+name = "bibliotek"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gray_matter = "0.3.2"
+serde = { version = "1.0.228", features = ["derive"] }
+tera = "1.20.1"
+pulldown-cmark = "0.13.0"
+walkdir = "2.5.0"
+csv = "1.4.0"

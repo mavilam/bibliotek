@@ -1,0 +1,23 @@
+---
+title: "Las despedidas"
+author: "Jacobo Bergareche"
+year_published: 0
+date_read: 2025-12-20
+rating: 3
+pages: 168
+tags: 
+ - "novela"
+ - "españa"
+---
+
+Leí Los días perfectos del tirón en viaje de avión. Y acabo de terminar las despedidas en otro. Ha sido como un deja vu porque las dos pequeñas novelas comparten una columna vertebral temática: la perdida del deseo en una relación de larga duración. 
+
+Diego tiene una vida que desde fuera parece perfecta: un negocio más que próspero, una mujer que, según describe, sigue siendo muy atractiva y tres hijos que son la envidia de sus amigos. Pero le da un vuelco al corazón cuando en un restaurante ve a una mujer con la que tuvo una aventura durante un viaje al festival Burning Man. Aquello no fue un simple affair: se da a entender que tuvo más importancia que prácticamente todos los eventos de su vida desde entonces. Desde que la ve, Diego solo piensa en lo especiales que fueron esos días y en lo poco especial que es su vida ahora.
+
+Hay una lectura del libro que trata de lo bonito que puede ser una relación que te marque tanto, que sea tan sentimentalmente pura y sincera. Es la lectura que elegí hacer, porque creo que es la necesaria para disfrutar del libro. Sin embargo, hay otra lectura posible: la de que el protagonista solo ve los defectos de su familia y hace tiempo que dejó de luchar para que esta cambie. Quizá el problema no sea la familia, sino él mismo; algo que llega a cuestionarse momentáneamente. Nunca lo sabremos del todo porque solo conocemos su versión y no hay que olvidar que su "gran historia" ocurrió en un festival, con una persona que no iba a volver a ver: una relación sin cargas ni obstáculos.
+
+ En mi opinión, Los días perfectos tiene algo que le hace más interesante que las despedidas y es esa segunda parte donde el protagonista se plantea qué pasa en su matrimonio y pone sobre papel qué puede hacer para ponerle arreglo. En Las despedidas esa reflexión son apenas un par de lineas dejando una ligera duda de que quizá su relación no funciona no porque su mujer haya cambiado sino porque él es otro. El estilo epistolar de Los días perfectos ayuda a saber qué es una confesión del protagonista. En las despedidas todo parece una confesión de una obsesión. 
+ 
+También hay que decir, al igual que Los días perfectos, que el libro tiene pequeños destellos de lucidez que brillan con luz especial. Uno de ellos es cuando Amy explica el significado del concepto de Nephente, el no-dolor, o la teoría de cómo somos capaces de abrimos más con neo-conocidos, personas que conocemos efímeramente, que con viejos amigos de toda la vida que hace años que no vemos ya que estos últimos ya no generan novedad ni vulnerabilidad fresca. 
+ 
+En conclusión, si enfocas el libro desde la perspectiva del poder de una relación efímera y lo que alguien puede significar para otro, es muy disfrutable. Si te centras demasiado en la mirada que tiene Diego sobre su familia, quizá acabes sintiendo que, simplemente, es un poco gilipollas.
