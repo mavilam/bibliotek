@@ -1,0 +1,231 @@
+:root {
+    --txt-white:      #d4fff0;
+    --txt-muted:      #8abfb0;
+    --txt-accent:     #d4a017;
+    --bg-black:       #131414;
+    --bg-surface:     #1a1b1c;
+    --tag-bg:         #1e2e2a;
+
+    --txt-normal:     1.125rem;
+    --txt-big:        1.5rem;
+    --txt-title:      2rem;
+
+    --content-width:  680px;
+}
+
+@font-face {
+    font-family: 'Vercetti';
+    src: url('../font/Vercetti-Regular.otf') format('opentype');
+}
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: var(--bg-black);
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', 'Vercetti', serif;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    line-height: 1.8;
+    color: var(--txt-white);
+}
+
+/* — Headings — */
+
+h1 {
+    font-family: 'Vercetti', Georgia, serif;
+    font-size: var(--txt-title);
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 0.25em;
+    color: var(--txt-white);
+}
+
+h2 {
+    font-size: var(--txt-big);
+    font-weight: 400;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--txt-white);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--txt-white);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page-header .content {
+    margin-top: 1rem;
+}
+
+.section-groups h2 {
+    margin-top: 0;
+}
+
+.section-block {
+    margin-bottom: 2.5rem;
+}
+
+.section-block h3 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+}
+
+.section-topic {
+    color: var(--txt-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.book-item {
+    margin: 0;
+    line-height: 1.45;
+    border-left: 2px solid var(--txt-accent);
+    padding-left: 0.85rem;
+}
+
+.book-item span {
+    display: block;
+}
+
+.book-title {
+    font-size: 1.05rem;
+}
+
+.book-author,
+.book-date {
+    color: var(--txt-muted);
+    font-size: 0.95rem;
+}
+
+.all-reviews-link h2 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+/* — Body text — */
+
+p {
+    font-size: var(--txt-normal);
+    margin-bottom: 1.25em;
+}
+
+a {
+    color: var(--txt-accent);
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 0.15em;
+}
+
+a:hover {
+    color: #e6b830;
+}
+
+blockquote {
+    border-left: 3px solid var(--txt-accent);
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.25rem;
+    color: var(--txt-muted);
+    font-style: italic;
+}
+
+/* — Review meta — */
+
+.meta {
+    color: var(--txt-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.meta span + span::before {
+    content: " · ";
+}
+
+.rating {
+    color: var(--txt-accent);
+    letter-spacing: 0.05em;
+}
+
+.tags {
+    margin-top: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tags span {
+    background: var(--tag-bg);
+    color: var(--txt-muted);
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* — Review content — */
+
+.content {
+    margin-top: 2rem;
+}
+
+.content p {
+    margin-bottom: 1.25em;
+}
+
+.content ul,
+.content ol {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+.content li {
+    margin-bottom: 0.4em;
+    list-style: disc;
+}
+
+/* — Responsive — */
+
+@media screen and (min-width: 1800px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        padding: 2rem 1rem 3rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
