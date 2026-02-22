@@ -8,16 +8,16 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
-      - name: Install just
-        run: sudo apt-get install just
       - name: Set up Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
       - name: Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ~/.cargo/registry
@@ -25,7 +25,7 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Build
-        run: just run-all
+        run: cargo run --bin bibliotek
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

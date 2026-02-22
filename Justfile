@@ -11,8 +11,3 @@ build-site:
 # Open the generated site in the default browser.
 open:
     open output/index.html
-
-# Run both binaries: import reviews, then build site.
-run-all input="goodreads_library_export.csv" output="reviews":
-    just csv-to-reviews "{{input}}" "{{output}}"
-    just build-site
