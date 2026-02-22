@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'Vercetti';
-    src: url('../font/Vercetti-Regular.otf') format('opentype');
+    src: url('./Vercetti-Regular.otf') format('opentype');
 }
 
 *,
@@ -32,7 +32,7 @@ html {
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', 'Vercetti', serif;
+    font-family: 'Vercetti', Georgia, 'Times New Roman', serif;
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 3rem 1.5rem 5rem;

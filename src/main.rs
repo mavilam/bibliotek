@@ -99,6 +99,12 @@ fn main() {
     fs::copy("templates/index.css", output_dir().join("index.css"))
         .expect("Could not copy index.css to output");
 
+    fs::copy(
+        "templates/Vercetti-Regular.otf",
+        output_dir().join("Vercetti-Regular.otf"),
+    )
+    .expect("Could not copy font to output");
+
     let reviews_root = PathBuf::from(input_dir());
     let mut sections_map: HashMap<PathBuf, Vec<PathBuf>> = HashMap::new();
     for entry in WalkDir::new(&reviews_root) {
