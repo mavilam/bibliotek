@@ -5,10 +5,14 @@ year_published: 2020
 date_read: 2023-09-26
 rating: 5
 pages: 172
-tags: []
+tags: 
+ - "novela"
+ - "españa"
+ - "costumbrismo"
+ - "lgtbiq"
 ---
 
-En un tiempo donde las inteligencias artificiales amenazan con que todo lo que leamos tenga el mismo estilo y tono, Andrea Abreu escribe un libro con una impronta muy personal, usando un lenguaje coloquial y costumbrista, que se siente como beber agua de un botijo en agosto.
+En un tiempo donde las inteligencias artificiales amenazan con convertir todo lo que leamos en textos con el mismo estilo y tono, Andrea Abreu escribe un libro con una impronta muy personal, usando un lenguaje coloquial y costumbrista, que se siente como beber agua de un botijo en agosto.
 
 En panza de burro, se muestra el inmenso mundo de una niña canaria y de su mejor amiga dentro de su pequeño barrio. Un relato costumbrista que se extiende durante un verano, entre la infancia y la adolescencia, donde la protagonista sufre un autoconocimiento muy fuerte (el primer amor, el no saber que le pasa a una por dentro...), todo escrito desde la mirada de una niña que ignora o no pone nombre a muchas cosas que los adultos sí tienen en su mente. Cada frase viene desde las entrañas de la autora, plagado de palabras y expresiones escatológicas que hace única la narración.
 

@@ -14,7 +14,7 @@
             <span>{{ author }}</span>
             <span>{{ date_read }}</span>
             <span>{{ year_published }}</span>
-            <span class="rating">{% for i in range(end=rating) %}★{% endfor %}{% for i in range(end=5 - rating) %}☆{% endfor %}</span>
+            <span class="rating">{% for i in range(end=rating) %}✦{% endfor %}{% for i in range(end=5 - rating) %}✧{% endfor %}</span>
         </div>
         <div class="tags">
             {% for tag in tags %}

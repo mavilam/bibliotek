@@ -5,7 +5,9 @@ year_published: 1964
 date_read: 2024-02-01
 rating: 0
 pages: 15
-tags: []
+tags: 
+ - "relatos"
+ - "estados unidos"
 ---
 
 [Leído en alto en el taller de escritura]
