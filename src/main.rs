@@ -72,6 +72,8 @@ struct SectionInfo {
     reviews: Vec<ReviewInfo>,
 }
 
+const BASE_URL: &str = "https://mavilam.github.io/bibliotek";
+
 static OUTPUT_DIR: OnceLock<PathBuf> = OnceLock::new();
 
 static INPUT_DIR: OnceLock<PathBuf> = OnceLock::new();
@@ -104,6 +106,9 @@ fn main() {
         output_dir().join("Vercetti-Regular.otf"),
     )
     .expect("Could not copy font to output");
+
+    fs::copy("templates/card.png", output_dir().join("card.png"))
+        .expect("Could not copy card.png to output");
 
     let reviews_root = PathBuf::from(input_dir());
     let mut sections_map: HashMap<PathBuf, Vec<PathBuf>> = HashMap::new();
@@ -164,8 +169,11 @@ fn render_index(tera: &Tera, all_sections: &[SectionInfo]) {
     };
 
     let body_html = markdown_to_html(&result.content);
+    let page_url = format!("{}/", BASE_URL);
     let mut context = Context::new();
     context.insert("css_path", &css_path);
+    context.insert("base_url", BASE_URL);
+    context.insert("page_url", &page_url);
     context.insert("title", &metadata.title);
     context.insert("tag", &metadata.tag);
     context.insert("content", &body_html);
@@ -195,8 +203,11 @@ fn render_all_reviews_section(tera: &Tera, dir_reviews: &[ReviewInfo]) {
         })
         .collect();
     let css_path = css_path_for_output(input_dir());
+    let page_url = format!("{}/all_reviews.html", BASE_URL);
     let mut context = Context::new();
     context.insert("css_path", &css_path);
+    context.insert("base_url", BASE_URL);
+    context.insert("page_url", &page_url);
     context.insert("title", "Reseñas");
     context.insert("dir_reviews", &grouped);
 
@@ -227,8 +238,11 @@ fn render_section(path: &Path, tera: &Tera, dir_reviews: &[ReviewInfo]) -> Optio
         .collect();
 
     let section_topic = metadata.topic.unwrap_or_default();
+    let page_url = format!("{}/{}", BASE_URL, relative_html_path(path));
     let mut context = Context::new();
     context.insert("css_path", &css_path);
+    context.insert("base_url", BASE_URL);
+    context.insert("page_url", &page_url);
     context.insert("title", &metadata.title);
     context.insert("topic", &section_topic);
     context.insert("tag", &metadata.tag);
@@ -263,8 +277,11 @@ fn render_review(path: &Path, tera: &Tera) -> Option<ReviewInfo> {
     };
     let body_html = markdown_to_html(&result.content);
 
+    let page_url = format!("{}/{}", BASE_URL, relative_html_path(path));
     let mut context = Context::new();
     context.insert("css_path", &css_path);
+    context.insert("base_url", BASE_URL);
+    context.insert("page_url", &page_url);
     context.insert("title", &metadata.title);
     context.insert("author", &metadata.author);
     context.insert("year_published", &metadata.year_published);
