@@ -5,7 +5,9 @@ year_published: 1991
 date_read: 2023-02-13
 rating: 5
 pages: 160
-tags: []
+tags:
+ - "novela"
+ - "hungría"
 ---
 
 Durante la lectura la primera parte de "La tercera mentira" me he sentido retado. He releído trozos enteros varias veces porque pensaba que no estaba enterándome de lo que me quería contar, pero no, simplemente es que el relato está desdibujado, como para los protagonistas: párrafos en primera persona, párrafos en tercera, ciudades y países nombrados por una única inicial, recuerdos, narraciones en presente... Pero poco a poco llegamos a una conclusión: "El gran cuaderno" era literalmente un gran cuaderno escrito por uno de los gemelos. Una historia escrita para soportar la realidad, la escritura como evasión y como refugio. Pero ¿de verdad existe el segundo gemelo o es parte de su imaginación?

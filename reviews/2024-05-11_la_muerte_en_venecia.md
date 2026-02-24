@@ -5,7 +5,10 @@ year_published: 1911
 date_read: 2024-05-11
 rating: 3
 pages: 189
-tags: []
+tags:
+ - "novela"
+ - "alemania"
+ - "clásicos"
 ---
 
 Durante la lectura de La muerte en Venecia, he pasado por varias fases, desde la fascinación hasta casi el aburrimiento. Empezando por lo malo, Thomas Mann utiliza una escritura muy barroca, llena de descripciones, las cuales dirían que ocupan más de la mitad de lo escrito, donde hasta un barbero, mientras le corta el pelo al protagonista, da conversación de la forma más alambicada posible. Entiendo que es parte del encanto de la obra, pero personalmente, a ratos, me sacaba de la narración.

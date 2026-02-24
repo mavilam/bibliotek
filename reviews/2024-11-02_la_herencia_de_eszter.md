@@ -5,7 +5,10 @@ year_published: 1939
 date_read: 2024-11-02
 rating: 3
 pages: 168
-tags: []
+tags:
+ - "novela"
+ - "hungría"
+ - "clásicos"
 ---
 
 Después de leer varios libros de Stefan Zweig y buscando algo similar, leí que muchos aficionados del austriaco recomiendan a Sándor Márai, y La herencia de Eszter, en parte porque es una novela breve, ideal para leerla en una sola tarde.

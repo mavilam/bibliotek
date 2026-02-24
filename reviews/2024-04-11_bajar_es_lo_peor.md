@@ -5,7 +5,9 @@ year_published: 1995
 date_read: 2024-04-11
 rating: 0
 pages: 273
-tags: []
+tags:
+ - "novela"
+ - "argentina"
 ---
 
 Me encanta mariana Enríquez. No sólo sus libros, ella. Siendo ya una escritora de renombre, sigue reafirmando su personalidad y sus aficiones, muy lejos de una escritora erudita con gustos inalcanzables, ella sigue ensalzando su gusto por el fenómeno fan, la creencia en lo sobrenatural y todos esos dejes que ha tenido desde joven.

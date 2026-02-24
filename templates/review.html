@@ -8,7 +8,7 @@
     <meta property="og:title" content="{{ title }} — Bibliotek">
     <meta property="og:description" content="{{ author }} · {{ year_published }}">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="{{ base_url }}/card.png">
+    <meta property="og:image" content="{{ base_url }}/assets/card.png">
     <meta property="og:url" content="{{ page_url }}">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
     <link rel="stylesheet" href="{{ css_path }}">
@@ -19,7 +19,6 @@
         <h1>{{ title }}</h1>
         <div class="meta">
             <span>{{ author }}</span>
-            <span>{{ date_read }}</span>
             <span>{{ year_published }}</span>
             <span class="rating">{% for i in range(end=rating) %}✦{% endfor %}{% for i in range(end=5 - rating) %}✧{% endfor %}</span>
         </div>
@@ -31,6 +30,8 @@
         <div class="content">
             {{ content | safe }}
         </div>
+        <hr class="review-divider">
+        <p class="date-read"><em>Leído el {{ date_read }}</em></p>
     </article>
 </body>
 </html>

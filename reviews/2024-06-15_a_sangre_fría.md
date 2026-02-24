@@ -5,7 +5,10 @@ year_published: 1966
 date_read: 2024-06-15
 rating: 4
 pages: 440
-tags: []
+tags: 
+ - "no ficción"
+ - "estados unidos"
+ - "clásicos"
 ---
 
 Después de muchos meses en mi estantería, me lancé de lleno a la que todo el mundo denomina la gran obra de Truman Capote "A sangre fría", quizá la madre de todos los podcast y series actuales de True Crime. Truman Capote presenta una narración increíblemente documentada, cargada con detalles de lo más íntimos que llegas a plantearte la manera en que el autor llegó a conseguirlos. En un principio da la sensación de que la narración es totalmente objetiva, un texto periodísco donde se reflejan los actos de un asesinato de inicio a fin, pero a poco que hayas leído sobre el contexto del autor durante su proceso de investigación, hay ciertos sesgos que se vuelven evidentes, siendo más benévolo con Perry Smith, con el cual se rumorea que tuvo una relación sentimental durante la investigación. De todas maneras, la narración es pulcra en todo momento y no entra a detalles sensacionalistas o escabrosos: sobre los hechos clave tienes la información necesaria y no se recrea en las situaciones violentas.

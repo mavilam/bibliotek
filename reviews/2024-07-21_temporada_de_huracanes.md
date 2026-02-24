@@ -5,7 +5,9 @@ year_published: 2017
 date_read: 2024-07-21
 rating: 4
 pages: 224
-tags: []
+tags:
+ - "novela"
+ - "méxico"
 ---
 
 Tengo que reconocer que me constó unas cuantas páginas entrar al libro. Hasta el punto de pensar en dejarlo. Pero a la mitad del testimonio de Yesenia, mi cabeza entró de lleno en ese estilo tan peculiar que tiene el libro y no pude soltarlo. Un estilo muy oral, lleno de modismos y muy de calle, que si bien me parece un gran acierto que otorga originalidad y autenticidad, puede provocar una barrera de entrada grande, sobre todo si no eres mexicano. Además, la autora no se guarda nada: nombra lo feo, lo escatológico, lo aterrador... porque si no nombras algo, no existe.

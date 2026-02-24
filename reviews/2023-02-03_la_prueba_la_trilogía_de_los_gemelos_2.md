@@ -5,7 +5,9 @@ year_published: 1988
 date_read: 2023-02-03
 rating: 4
 pages: 160
-tags: []
+tags:
+ - "novela"
+ - "hungría"
 ---
 
 Claus se ha ido. Lucas está solo. Por lo que este pierde la voz, y el libro pasa a estar contado en tercera persona. Pero, ¿De verdad se ha ido o siempre han sido uno en realidad? Durante gran parte del libro me queda esta duda, que coge más fuerza en los capítulos finales. A pesar de estar escrito con otro tipo de narrador, continúa con su estilo de escritura directo, prácticamente sin adjetivar, dando muchísima importancia a los diálogos.

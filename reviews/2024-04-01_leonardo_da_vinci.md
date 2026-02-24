@@ -5,7 +5,10 @@ year_published: 2017
 date_read: 2024-04-01
 rating: 4
 pages: 600
-tags: []
+tags:
+ - "biografía"
+ - "historia del arte"
+ - "no ficción"
 ---
 
 Empecé esta biografía como preparación para un viaje a Florencia, ya que Leonardo es uno de los Florentinos más importantes de la historia. Es imposible no conocer algo de la vida de Leonardo, ya que ha sido inmortalizado en numerosas obras de ficción popular, desde el código da Vinci hasta las tres mellizas pasando por el Assassins Creed. Tenía una pequeña admiración hacia el arquetipo de hombre del renacimiento desde el mínimo conocimiento de estos, por la polimatía que les caracterizaba, pero cuanto más leía sobre Leonardo, más asombrado me quedaba. 

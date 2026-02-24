@@ -5,7 +5,10 @@ year_published: 2010
 date_read: 2023-07-17
 rating: 4
 pages: 368
-tags: []
+tags: 
+ - "memorias"
+ - "austria"
+ - "no ficción"
 ---
 
 Había escuchado mucho sobre este libro, pero la comparación con Zweig me llevó a elegirlo por encima de otros de mi pila de pendientes. Eso y que la magnífica edición de los libros de Acantilado es una debilidad para mí.

@@ -5,7 +5,8 @@ year_published: 0
 date_read: 2024-02-06
 rating: 4
 pages: 72
-tags: []
+tags:
+ - "no ficción"
 ---
 
 ¿Debería la estética estar liberada de la posición política del autor? ¿Hasta que punto todo lo que se crea está libre de posicionamiento político? Preguntas como estas se plantea Ian McEwan en este pequeño ensayo, sin dar ninguna respuesta categórica a las preguntas. En un inicio se presentan las dos vertientes de la cuestión: Orwell defendiendo su posición política con su propia vida, por lo tanto plasmando sus ideas políticas en sus creaciones, y Henry Miller estando fuera de toda corriente política y centrándose únicamente en la estética. Por otra parte Orwell exponía que su manera de luchar era la manera de combatir por la libertad, incluida la de personas como Henry Miller. 

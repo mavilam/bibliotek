@@ -5,7 +5,11 @@ year_published: 1942
 date_read: 2024-04-20
 rating: 5
 pages: 124
-tags: []
+tags: 
+ - "novela
+ - "filosofía"
+ - "francia"
+ - "clásicos"
 ---
 
 En un contexto donde el ser humano vive en un mundo roto tras dos guerras mundiales, donde el impulso imperante era matarnos los unos a los otros ¿Cómo se enfrenta una persona la vida? Albert Camus presenta a un personaje que apenas tiene sentimientos, más allá de una apatía constante, ya sea frente a la muerte de su madre, a una relación amorosa o a su ajusticiamiento. Nada es importante, nada deja poso, solo se limita a estar en el mundo. Lo único que le remueve es la brisa, el sol, posar su mirada en el mar o cuando tiene relaciones con Marie, todo sensaciones físicas.

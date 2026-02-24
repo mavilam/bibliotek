@@ -101,14 +101,14 @@ fn main() {
     fs::copy("templates/index.css", output_dir().join("index.css"))
         .expect("Could not copy index.css to output");
 
-    fs::copy(
-        "templates/Vercetti-Regular.otf",
-        output_dir().join("Vercetti-Regular.otf"),
-    )
-    .expect("Could not copy font to output");
-
-    fs::copy("templates/card.png", output_dir().join("card.png"))
-        .expect("Could not copy card.png to output");
+    // Copy all the assets into the output directory
+    let assets_out = output_dir().join("assets");
+    fs::create_dir_all(&assets_out).expect("Could not create assets directory");
+    for entry in fs::read_dir("templates/assets").expect("Could not read assets directory") {
+        let entry = entry.expect("Could not read assets entry");
+        fs::copy(entry.path(), assets_out.join(entry.file_name()))
+            .expect("Could not copy asset file");
+    }
 
     let reviews_root = PathBuf::from(input_dir());
     let mut sections_map: HashMap<PathBuf, Vec<PathBuf>> = HashMap::new();

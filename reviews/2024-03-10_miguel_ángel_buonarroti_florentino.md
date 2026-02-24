@@ -5,7 +5,11 @@ year_published: 2002
 date_read: 2024-03-10
 rating: 0
 pages: 76
-tags: []
+tags:
+ - "historia del arte"
+ - "italia"
+ - "no ficción"
+ - "clásicos"
 ---
 
 Giorgio Vasari está considerado uno de los primeros historiadores de arte, pero este pequeño libro no está escrito como esperaríamos por parte de un historiador del arte contemporaneo ya que la objetividad ni está ni se la espera.

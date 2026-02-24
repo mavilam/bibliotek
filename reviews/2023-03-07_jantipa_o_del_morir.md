@@ -5,7 +5,11 @@ year_published: 2022
 date_read: 2023-03-07
 rating: 4
 pages: 136
-tags: []
+tags: 
+ - "novela"
+ - "españa"
+ - "filosofía"
+ - "dialogos"
 ---
 
 Me acerqué al libro con bastante interés, ya que admiro la erudición de Ernesto Castro, pero con un poco de "miedo" de no ser capaz de entender o seguir las reflexiones con mis pocos conocimientos de filosofía, ya que la novela se construye en la intención del autor de volver a traer a la vida el diálogo como medio de narración, inspirándose en los diálogos de Platón. 

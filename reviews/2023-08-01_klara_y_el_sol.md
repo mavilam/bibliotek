@@ -5,7 +5,11 @@ year_published: 2021
 date_read: 2023-08-01
 rating: 2
 pages: 334
-tags: []
+tags: 
+ - "novela"
+ - "inglaterra"
+ - "metafísica"
+ - "ciencia ficción"
 ---
 
 La novela empieza con la descripción de un mundo futuro que pinta bien, pero, a mi juicio, se tuerce al usar el mundo como mero escenario. Se desarrollan algunos detalles, como los niños mejorados biológicamente o la comuna en la que vive el padre de Josie, pero no sabemos más de ellas porque la novela se centra únicamente en la relación de Klara con Josie. 

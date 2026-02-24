@@ -5,7 +5,12 @@ year_published: 1942
 date_read: 2024-01-27
 rating: 4
 pages: 545
-tags: []
+tags: 
+ - "biografía"
+ - "memorias"
+ - "austria"
+ - "no ficción"
+ - "clásicos"
 ---
 
 Después de haber leído varios libros de Stefan Zweig y que su prosa me haya fascinado, fui directo a por su libro más alabado: El mundo de ayer. Y no sé si han sido las espectativas o la imagen que tenía yo del autor en la cabeza, que ha hecho que el libro me guste, pero que no tenga el mismo efecto que sus novelas o biografías.
