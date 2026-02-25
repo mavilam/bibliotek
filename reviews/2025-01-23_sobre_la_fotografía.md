@@ -5,7 +5,9 @@ year_published: 1973
 date_read: 2025-01-23
 rating: 3
 pages: 285
-tags: []
+tags: 
+ - "estados unidos"
+ - "no ficción"
 ---
 
 Debido al contexto en el que vivimos, donde el consumo de imágenes se realiza a una velocidad mayor de la que nuestro cerebro puede procesar, mi interés por la fotografía ha crecido recientemente. Y, por supuesto, cuando me puse a buscar ensayos sobre el tema, todas las señales apuntaban al ensayo de Susan Sontag.

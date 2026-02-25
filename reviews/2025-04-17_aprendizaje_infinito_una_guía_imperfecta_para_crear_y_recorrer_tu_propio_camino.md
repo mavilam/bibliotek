@@ -5,7 +5,9 @@ year_published: 0
 date_read: 2025-04-17
 rating: 5
 pages: 224
-tags: []
+tags: 
+ - "no ficción"
+ - "españa"
 ---
 
 En la presentación del libro, Sergio San Juan comentó que había escrito el libro que le hubiera gustado leer cuando empezó su camino de aprendizaje: una guía o manual sobre cómo navegar las aguas del viaje eterno del aprendiz. En mi opinión, ha conseguido crear un libro que te ayuda a organizar tu aprendizaje mientras siembra pequeñas píldoras de conocimiento a lo largo del camino.

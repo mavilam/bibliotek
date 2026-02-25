@@ -5,7 +5,9 @@ year_published: 1979
 date_read: 2024-09-08
 rating: 2
 pages: 382
-tags: []
+tags: 
+ - "méxico"
+ - "novela"
 ---
 
 Llegué a esta novela buscando novelas sobre el México prehispánico y decidí empezarla porque sinceramente no encontré muchas más con esa temática. El planteamiento de la historia es curioso y aunque no es historicamente cierta promete en un inicio, pero el libro tiene dos grandes fallos a mi parecer. 

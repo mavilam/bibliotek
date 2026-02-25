@@ -220,6 +220,7 @@ blockquote {
 }
 
 .date-read {
+    margin-top: 0.5em;
     color: var(--txt-muted);
     font-size: 0.9rem;
 }

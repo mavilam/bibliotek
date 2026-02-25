@@ -5,7 +5,9 @@ year_published: 2022
 date_read: 2024-03-01
 rating: 3
 pages: 392
-tags: []
+tags: 
+ - "inglaterra"
+ - "novela"
 ---
 
 Retrato de casada es una obra de ficción histórica que imagina la vida que podría haber tenido Lucrezia de Medici, la hija mediana de Cosimo y Leonora. Se sabe poco de la vida de Lucrezia, únicamente que murió joven, cosa que te dicen nada más iniciar el libro, y que se piensa que fue por envenenamiento.

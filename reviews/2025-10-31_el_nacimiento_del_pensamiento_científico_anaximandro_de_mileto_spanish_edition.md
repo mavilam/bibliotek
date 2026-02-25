@@ -5,7 +5,11 @@ year_published: 2005
 date_read: 2025-10-31
 rating: 4
 pages: 193
-tags: []
+tags: 
+ - "italia"
+ - "filosofía"
+ - "ciencia"
+ - "no ficción"
 ---
 
 Es sorprendente lo poco que conocemos a Anaximandro a pesar de haber sido una figura tan revolucionaria en la historia del pensamiento. Rovelli nos presenta a un pensador que, en el siglo VI a.C., rompió los moldes del pensamiento.

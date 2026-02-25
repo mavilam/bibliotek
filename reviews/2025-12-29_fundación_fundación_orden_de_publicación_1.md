@@ -5,7 +5,12 @@ year_published: 1951
 date_read: 2025-12-29
 rating: 4
 pages: 264
-tags: []
+tags: 
+ - "ciencia ficción"
+ - "estados unidos"
+ - "clásicos"
+ - "relatos"
+ - "en inglés"
 ---
 
 Fundación de Isaac Asimov era uno de esos grandes hitos literarios que estaban en mi lista de pendientes con la etiqueta de infalible, pues hasta el momento no había leído con una sola crítica negativa. Sin duda, ese peso de las expectativas ha condicionado mi lectura, que comenzó con entusiasmo pero fue perdiendo intensidad a medida que avanzaba hacia el final.

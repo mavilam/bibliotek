@@ -1,11 +1,13 @@
 ---
-title: "El erizo y el zorro (IMPRESCINDIBLES) (Spanish Edition)"
+title: "El erizo y el zorro"
 author: "Isaiah Berlin"
 year_published: 1953
 date_read: 2025-04-30
 rating: 0
 pages: 170
-tags: []
+tags: 
+ - "inglaterra"
+ - "no ficción"
 ---
 
 Isaiah Berlin escribe un breve ensayo partiendo de una metáfora del poeta griego Arquíloco para analizar dos formas de enfrentar al mundo:

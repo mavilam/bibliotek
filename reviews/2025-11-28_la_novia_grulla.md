@@ -5,7 +5,10 @@ year_published: 2022
 date_read: 2025-11-28
 rating: 4
 pages: 360
-tags: []
+tags: 
+ - "no ficción"
+ - "estados unidos"
+ - "memorias"
 ---
 
 La novia grulla es una colección de microensayos autobiográficos donde la autora aborda multitud de temas: amor, sexo, cultura, identidad... Algunos tienen un formato cercano a la no ficción y otros son más narrativos, pero todos funcionan de forma independiente. Si bien puedes leer el libro del tirón, mi experiencia ha sido mucho mejor al espaciarlos, dejando que cada texto respire antes de comenzar el siguiente.

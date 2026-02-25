@@ -5,7 +5,9 @@ year_published: 1992
 date_read: 2025-06-13
 rating: 3
 pages: 127
-tags: []
+tags: 
+ - "novela"
+ - "españa"
 ---
 
 Lo peor de todo es una novela un tanto desconcertante que viene a transcribir una especie de diario de una persona inestable. Ray Loriga construye un narrador ambiguo cuya voz a veces transmite sensaciones infantiles y otras una madurez adulta, creando una confusión que obliga al lector a reinterpretar constantemente lo que está leyendo. ¿Es un niño contando el colapso familiar? ¿Un adulto con inestabilidad mental rememorando traumas? No queda claro y quizá esa incertidumbre sea una de las fuerzas del libro: la forma sobre el contenido.

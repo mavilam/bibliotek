@@ -7,6 +7,7 @@ rating: 5
 pages: 384
 tags: 
  - "novela"
+ - "perú"
  - "latinoamérica"
 ---
 

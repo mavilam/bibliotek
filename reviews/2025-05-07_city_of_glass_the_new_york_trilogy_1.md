@@ -5,7 +5,10 @@ year_published: 1985
 date_read: 2025-05-07
 rating: 4
 pages: 203
-tags: []
+tags: 
+ - "estados unidos"
+ - "novela"
+ - "en inglés"
 ---
 
 La primera parte de la Trilogía de Nueva York es una propuesta literaria más compleja y enrevesada de lo que su aparente premisa detectivesca sugiere. Auster construye un texto donde la estructura formal refleja el propio desmoronamiento interno del protagonista.

@@ -5,7 +5,10 @@ year_published: 2024
 date_read: 2025-04-03
 rating: 4
 pages: 464
-tags: []
+tags: 
+ - "irlanda"
+ - "novela"
+ - "en inglés"
 ---
 
 Sally Rooney carga con la etiqueta de la autora de la generación millenial casi desde su primera novela, además está considerada por la industria como un fenómeno editorial dirigido al gran público. Con alguna de sus anteriores novelas lo entiendo, no con Intermezzo, donde su propuesta literaria es mucho más compleja y enrevesada. Haciendo una comparación burda, en esta nueva novela, está más cerca del estudio psicológico de un Dostoyevski que de la ligereza comercial de una novela romántica best-seller (salvando, por supuesto, las distancias).

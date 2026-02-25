@@ -5,7 +5,10 @@ year_published: 2022
 date_read: 2025-01-02
 rating: 2
 pages: 64
-tags: []
+tags: 
+ - "francia"
+ - "no ficción"
+ - "memorias"
 ---
 
 Es de sobra sabido que Annie Ernaux toma su vida como la base de sus textos. En este, narra su relación con un hombre 30 años menor que ella, cuando tenía alrededor de 55 años, y con un estatus social más bajo: el hombre tiene lo justo para pasar el día.

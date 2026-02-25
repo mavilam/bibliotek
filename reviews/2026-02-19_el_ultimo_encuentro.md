@@ -7,6 +7,8 @@ rating: 4
 pages: 192
 tags: 
  - "novela"
+ - "hungría"
+ - "clásicos"
 ---
 Entré a Sándor Márai por mi amor a la literatura de Stefan Zweig, pero *La herencia de Ezster* no me terminó de convencer. El último encuentro es otra de sus obras capitales y no puedo hacer otra cosa que rendirme a sus pies, porque es una novela que contiene una intensidad de sentimientos expresados con una capacidad que creo que no está en la mano de cualquiera.
 

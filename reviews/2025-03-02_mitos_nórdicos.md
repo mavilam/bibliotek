@@ -5,7 +5,10 @@ year_published: 2017
 date_read: 2025-03-02
 rating: 4
 pages: 272
-tags: []
+tags: 
+ - "inglaterra"
+ - "no ficción"
+ - "mitología"
 ---
 
 Después de leer Mythos, de Stephen Fry, me quedé con ganas de encontrar un libro similar, pero centrado en la mitología nórdica, que me permitiera conocer la base de la cultura y los personajes principales. Tras buscar un poco, llegué a este de Neil Gaiman, autor de un par de novelas que me sorprendieron tanto en el fondo como en la forma.

@@ -5,7 +5,11 @@ year_published: 1986
 date_read: 2025-06-30
 rating: 3
 pages: 179
-tags: []
+tags: 
+ - "estados unidos"
+ - "novela"
+ - "clásicos"
+ - "en inglés"
 ---
 
 Después de leer _Ciudad de cristal_ y _Ghost_, me acerqué al último libro de la _Trilogía de Nueva York_ de Paul Auster como cuando voy a ver una película de David Lynch: tengo la intuición de que me va a gustar, pero sé que voy a salir con muchas dudas.

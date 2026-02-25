@@ -21,6 +21,7 @@
             <span>{{ author }}</span>
             <span>{{ year_published }}</span>
             <span class="rating">{% for i in range(end=rating) %}✦{% endfor %}{% for i in range(end=5 - rating) %}✧{% endfor %}</span>
+            <p class="date-read"><em>Leído el {{ date_read }}</em></p>
         </div>
         <div class="tags">
             {% for tag in tags %}
@@ -31,7 +32,6 @@
             {{ content | safe }}
         </div>
         <hr class="review-divider">
-        <p class="date-read"><em>Leído el {{ date_read }}</em></p>
     </article>
 </body>
 </html>

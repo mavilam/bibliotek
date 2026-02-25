@@ -5,7 +5,11 @@ year_published: 1866
 date_read: 2024-03-01
 rating: 4
 pages: 544
-tags: []
+tags: 
+ - "rusia"
+ - "novela"
+ - "clásicos"
+ - "existencialismo"
 ---
 
 Llevaba tiempo queriendo entrar en el mundo de Dostoyevsky y tras informarme un poco me decidí por Crimen y castigo ya que me atrae mucho el trato de la psicología de los personajes en el mundo literario y se comentaba que esta era una novela referencia si no la fundadora de un estilo. Como en toda novela, hay un conflicto aparentemente principal que consiste el tira y afloja de Raskólnikov con la justicia por ver si descubren o no que fue él el asesino de la prestamista, pero para mí esta la trama es algo secundario. Lo más relevante es el conflicto interno que se provoca Raskólnikov a sí mismo tras el asesinato. Este conflicto es de una alta complejidad moral y psicológica, ya que no solo se encuentra culpa en la mente del protagonista, él está constantemente buscando justificaciones a sus actos o maneras con las que redimirse. Es inestable desde un inicio pero cuando comente el asesinato su mente llega a cuestionarse su existencia, incluso planteandose el suicidio. Se cuestiona como  como él fue capaz de cometer el asesinato e inmendiatamente cambia de opinión y piensa que su acto fue útil socialmente, que ella era un parásito usurero y está mejor muerta. Está constantemente buscando una justificación para tranquilizar su mente.

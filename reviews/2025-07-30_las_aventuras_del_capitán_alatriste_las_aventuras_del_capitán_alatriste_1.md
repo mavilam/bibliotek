@@ -1,11 +1,13 @@
 ---
 title: "Las aventuras del capitán Alatriste (Las aventuras del capitán Alatriste, #1)"
-author: "Carlos Giménez"
+author: "Arturo Pérez-Reverte"
 year_published: 1996
 date_read: 2025-07-30
 rating: 3
 pages: 176
-tags: []
+tags: 
+ - "novela"
+ - "españa"
 ---
 
 Después de ver un par de adaptaciones de Los tres mosqueteros, me apetecía leer algo sobre el siglo de oro español pero nada muy denso, así que saldé una deuda pendiente, "El capitán Alatriste", mi primera novela de Arturo Pérez-Reverte. Sinceramente me ha sorprendido para bien: es una novela muy entretenida, sin excesivas pretensiones y con un personaje protagonista muy carismático.

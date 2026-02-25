@@ -5,7 +5,10 @@ year_published: 1940
 date_read: 2025-11-03
 rating: 3
 pages: 267
-tags: []
+tags: 
+ - "italia"
+ - "novela"
+ - "existencialismo"
 ---
 
 Drogo es un joven almirante recién licenciado. El futuro pinta brillante: va encaminado a una fortaleza en la frontera norte del reino, lugar de un potencial conflicto por la defensa del reino de invasores. La realidad resulta ser bastante diferente, desde hace años no hay actividad en la fortaleza, el único conflicto que se encuentra es el que tienen los soldados con el tiempo libre, la soledad y los pensamientos intrusivos. Pero, la posible guerra y la opción de vivir una vida honorable sigue ahí ¿verdad? Es joven, quedan muchos años, e inspirado por las leyendas que sobrevuelan la fortaleza, solo hace falta esperar y el momento llegará.

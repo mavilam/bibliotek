@@ -5,7 +5,10 @@ year_published: 2013
 date_read: 2025-05-15
 rating: 5
 pages: 304
-tags: []
+tags: 
+ - "no ficción"
+ - "estados unidos"
+ - "en inglés"
 ---
 
 El problema de la escasez suele tratarse como una cuestión de gestión de recursos. Sin embargo, en Scarcity, Sendhil Mullainathan y Eldar Shafir ofrecen un enfoque diferente: cómo la escasez afecta directamente al comportamiento humano.

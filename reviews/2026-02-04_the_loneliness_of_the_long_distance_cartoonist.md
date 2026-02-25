@@ -8,6 +8,8 @@ pages: 165
 tags: 
  - "cómic"
  - "biografía"
+ - "estados unidos"
+ - "en inglés"
 ---
 
 En The Loneliness of the Long-Distance Cartoonist, Adrian Tomine escribe unas memorias en forma de cómic sencillo y sin darse mucha importancia. A grandes rasgos, me ha generado una sensación muy agradable; he sentido todas las historias muy cercanas y, sobre todo, profundamente honestas. A través de una serie de escenas cotidianas, Tomine se retrata con una autocrítica constante con la que he podido empatizar de forma directa: ese darle mil vueltas a cada paso que das o palabra que dices, esa actitud de intentar no molestar y evitar ser el centro de atención en una habitación. A pesar de que nuestras realidades son muy diferentes, he sentido una cercanía real con el personaje y he comprendido prácticamente todas las situaciones por las que pasa, ya que el autor logra que sus inseguridades se sientan tangibles.

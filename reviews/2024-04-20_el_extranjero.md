@@ -6,7 +6,7 @@ date_read: 2024-04-20
 rating: 5
 pages: 124
 tags: 
- - "novela
+ - "novela"
  - "filosofía"
  - "francia"
  - "clásicos"

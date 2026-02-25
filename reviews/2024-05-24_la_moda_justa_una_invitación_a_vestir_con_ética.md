@@ -5,7 +5,10 @@ year_published: 2021
 date_read: 2024-05-24
 rating: 3
 pages: 96
-tags: []
+tags: 
+ - "españa"
+ - "no ficción"
+ - "ensayo"
 ---
 
 De este ensayo tan pequeño, no se puede decir mucho más que una alabanza al contenido de sus páginas, ya que están llenas de datos que, más o menos, sobrevuelan la cabeza de la gente pero que aquí se aterrizan con rotundidad y en un formato útil. Resumiendo mucho, es una guía para dar una vuelta a los hábitos de las personas que nos interesa lo que rodea al mundo de la moda entregando datos que no están muy a la vista. Sólo tengo un par de conflictos:

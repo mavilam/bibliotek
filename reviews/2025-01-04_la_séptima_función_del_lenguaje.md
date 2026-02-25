@@ -5,7 +5,11 @@ year_published: 2015
 date_read: 2025-01-04
 rating: 4
 pages: 298
-tags: []
+tags: 
+ - "francia"
+ - "novela"
+ - "filosofía"
+ - "thriller"
 ---
 
 Hace un par de años leí HHhH de Laurent Binet; me encantó el contenido, pero más aún la forma: Binet tenía un estilo único y personal que me marcó. Por eso, al conocer la existencia de La séptima función del lenguaje, no dudé en lanzarme sin siquiera mirar de qué trataba.

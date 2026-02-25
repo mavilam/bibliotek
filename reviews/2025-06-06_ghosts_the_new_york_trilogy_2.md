@@ -5,7 +5,10 @@ year_published: 1986
 date_read: 2025-06-06
 rating: 3
 pages: 96
-tags: []
+tags: 
+ - "estados unidos"
+ - "novela"
+ - "en inglés"
 ---
 
 Después de Ciudad de Cristal, la trilogía de Nueva York de Paul Auster continúa con la temática detectivesca y obsesiva. En Ghost, Azul es contratado por Blanco para hacer un seguimiento y vigilancia a Negro. Lo que en un principio parece un caso sencillo se convierte en un juego de espejos donde Azul ya no sabe si es vigilante o vigilado, poniendo patas arriba su concepción de existencia y su vida hasta ese punto.

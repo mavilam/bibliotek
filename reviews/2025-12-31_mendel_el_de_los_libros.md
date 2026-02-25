@@ -7,6 +7,8 @@ rating: 4
 pages: 57
 tags: 
  - "novela"
+ - "austria"
+ - "clásicos"
 ---
 
 Stefan Zweig es mi autor de cabecera cuando hablamos de novela corta y Mendel el de los libros era la gran pieza pendiente que me quedaba por descubrir. 
