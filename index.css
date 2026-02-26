@@ -8,6 +8,7 @@
 
     --txt-normal:     1.125rem;
     --txt-big:        1.5rem;
+    --txt-small:      0.95rem;
     --txt-title:      2rem;
 
     --content-width:  680px;
@@ -48,14 +49,14 @@ h1 {
     font-weight: 400;
     line-height: 1.3;
     margin-bottom: 0.25em;
-    margin-top: 0.25em;
+    margin-top: 0.75em;
     color: var(--txt-white);
 }
 
 h2 {
     font-size: var(--txt-big);
     font-weight: 400;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.75rem;
     color: var(--txt-white);
 }
@@ -71,11 +72,15 @@ h3 {
 main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .page-header .content {
     margin-top: 1rem;
+}
+
+.page-header .content p:last-child {
+    margin-bottom: 0;
 }
 
 .section-groups h2 {
@@ -83,7 +88,7 @@ main {
 }
 
 .section-block {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .section-block h3 {
@@ -93,8 +98,8 @@ main {
 
 .section-topic {
     color: var(--txt-muted);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+    font-size: var(--txt-small);
+    margin-bottom: 0.5rem;
 }
 
 .book-list {
@@ -121,13 +126,22 @@ main {
 .book-author,
 .book-date {
     color: var(--txt-muted);
-    font-size: 0.95rem;
+    font-size: var(--txt-small);
     font-style: italic;
 }
 
 .all-reviews-link h2 {
     margin-top: 0;
     margin-bottom: 0.4rem;
+}
+
+.date-read {
+    font-style: italic;
+}
+
+p.date-read {
+    font-size: var(--txt-small);
+    margin-bottom: 0.1em;
 }
 
 /* — Body text — */
@@ -160,8 +174,8 @@ blockquote {
 
 .meta {
     color: var(--txt-muted);
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
+    font-size: var(--txt-small);
+    margin-bottom: 1rem;
     line-height: 1.6;
 }
 
@@ -192,7 +206,7 @@ blockquote {
 /* — Review content — */
 
 .content {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .content p {
@@ -210,19 +224,9 @@ blockquote {
     list-style: disc;
 }
 
-/* — Review footer — */
-
-.review-divider {
+hr.review-divider {
     border: none;
-    border-top: 1px solid var(--txt-muted);
-    margin: 2.5rem 0 1rem;
-    opacity: 0.35;
-}
-
-.date-read {
-    margin-top: 0.5em;
-    color: var(--txt-muted);
-    font-size: 0.9rem;
+    border-top: 1px solid var(--tag-bg);
 }
 
 /* — Responsive — */
