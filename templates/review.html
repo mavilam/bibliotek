@@ -15,19 +15,20 @@
 </head>
 <body>
     <article>
-        <nav class="homie"><a href="../index.html">inicio</a></nav>
+        <nav class="homie"><a href="{{ base_url }}/index.html">inicio</a></nav>
         <h1>{{ title }}</h1>
         <div class="meta">
             <span>{{ author }}</span>
             <span>{{ year_published }}</span>
             <span class="rating">{% for i in range(end=rating) %}✦{% endfor %}{% for i in range(end=5 - rating) %}✧{% endfor %}</span>
-            <p class="date-read"><em>Leído el {{ date_read }}</em></p>
+            <p class="date-read">Leído el {{ date_read }}</p>
+            <div class="tags">
+                {% for tag in tags %}
+                <span>{{ tag }}</span>
+                {% endfor %}
+            </div>
         </div>
-        <div class="tags">
-            {% for tag in tags %}
-            <span>{{ tag }}</span>
-            {% endfor %}
-        </div>
+        <hr class="review-divider">
         <div class="content">
             {{ content | safe }}
         </div>

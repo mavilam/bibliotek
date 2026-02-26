@@ -269,9 +269,13 @@ fn render_review(path: &Path, tera: &Tera) -> Option<ReviewInfo> {
     let raw = fs::read_to_string(path).unwrap();
     let matter = Matter::<YAML>::new();
 
-    let result: ParsedEntity<ReviewMetadata> = matter.parse(&raw).unwrap();
-    let metadata_opt = result.data;
-    let Some(metadata) = metadata_opt else {
+    let result: Result<ParsedEntity<ReviewMetadata>, gray_matter::Error> = matter.parse(&raw);
+    if let Err(error) = result {
+        // If there is a file that cannot be parsed, it panics to surface the error
+        panic!("Error parsing review {}: {error:?}", path.display());
+    };
+    let result = result.unwrap();
+    let Some(metadata) = result.data else {
         println!("{} had no content", path.display());
         return None;
     };
