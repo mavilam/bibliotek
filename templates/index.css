@@ -229,6 +229,17 @@ hr.review-divider {
     border-top: 1px solid var(--tag-bg);
 }
 
+.footer {
+    margin-top: 1rem;
+}
+
+.footer p {
+    font-size: var(--txt-small);
+    color: var(--txt-muted);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
 /* — Responsive — */
 
 @media screen and (min-width: 1800px) {

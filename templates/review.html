@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} — Bibliotek</title>
+{% extends "base.html" %}
+
+{% block title %}{{ title }} — Bibliotek{% endblock %}
+
+{% block meta %}
     <meta name="description" content="{{ author }} · {{ year_published }}">
     <meta property="og:title" content="{{ title }} — Bibliotek">
     <meta property="og:description" content="{{ author }} · {{ year_published }}">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="{{ base_url }}/assets/card.png">
-    <meta property="og:url" content="{{ page_url }}">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
-    <link rel="stylesheet" href="{{ css_path }}">
-</head>
-<body>
+{% endblock %}
+
+{% block og_type %}article{% endblock %}
+
+{% block body %}
     <article>
         <nav class="homie"><a href="{{ base_url }}/index.html">inicio</a></nav>
         <h1>{{ title }}</h1>
@@ -32,7 +29,5 @@
         <div class="content">
             {{ content | safe }}
         </div>
-        <hr class="review-divider">
     </article>
-</body>
-</html>
+{% endblock %}

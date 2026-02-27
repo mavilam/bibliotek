@@ -187,21 +187,7 @@ fn render_index(tera: &Tera, all_sections: &[SectionInfo]) {
 // This is not present in the reviews directory, but it is a section that contains all the reviews
 // and will be linked to from the index page.
 fn render_all_reviews_section(tera: &Tera, dir_reviews: &[ReviewInfo]) {
-    let mut by_year: BTreeMap<u32, Vec<ReviewInfo>> = BTreeMap::new();
-    for review in dir_reviews {
-        by_year
-            .entry(review.year_read)
-            .or_default()
-            .push(review.clone());
-    }
-    let grouped: Vec<(u32, Vec<ReviewInfo>)> = by_year
-        .into_iter()
-        .rev()
-        .map(|(year, mut reviews)| {
-            reviews.sort_by_key(|r| Reverse(r.date_read.clone()));
-            (year, reviews)
-        })
-        .collect();
+    let grouped = group_reviews_by_year(dir_reviews);
     let css_path = css_path_for_output(input_dir());
     let page_url = format!("{}/all_reviews.html", BASE_URL);
     let mut context = Context::new();
@@ -229,13 +215,14 @@ fn render_section(path: &Path, tera: &Tera, dir_reviews: &[ReviewInfo]) -> Optio
     };
     let body_html = markdown_to_html(&result.content);
 
-    let local_reviews: Vec<ReviewInfo> = dir_reviews
+    let mut local_reviews: Vec<ReviewInfo> = dir_reviews
         .iter()
         .map(|r| ReviewInfo {
             path: r.filename.clone(),
             ..r.clone()
         })
         .collect();
+    local_reviews.sort_by_key(|r| Reverse(r.date_read.clone()));
 
     let section_topic = metadata.topic.unwrap_or_default();
     let page_url = format!("{}/{}", BASE_URL, relative_html_path(path));
@@ -350,4 +337,23 @@ fn relative_html_path(path: &Path) -> String {
         .with_extension("html")
         .to_string_lossy()
         .into_owned()
+}
+
+fn group_reviews_by_year(reviews: &[ReviewInfo]) -> Vec<(u32, Vec<ReviewInfo>)> {
+    let mut by_year: BTreeMap<u32, Vec<ReviewInfo>> = BTreeMap::new();
+    for review in reviews {
+        by_year
+            .entry(review.year_read)
+            .or_default()
+            .push(review.clone());
+    }
+    let grouped: Vec<(u32, Vec<ReviewInfo>)> = by_year
+        .into_iter()
+        .rev()
+        .map(|(year, mut reviews)| {
+            reviews.sort_by_key(|r| Reverse(r.date_read.clone()));
+            (year, reviews)
+        })
+        .collect();
+    grouped
 }

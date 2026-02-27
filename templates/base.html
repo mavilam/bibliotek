@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bibliotek{% endblock %}</title>
+    {% block meta %}{% endblock %}
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:image" content="{{ base_url }}/assets/card.png">
+    <meta property="og:url" content="{{ page_url }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <link rel="stylesheet" href="{{ css_path }}">
+</head>
+<body>
+    {% block body %}{% endblock %}
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+</body>
+</html>
