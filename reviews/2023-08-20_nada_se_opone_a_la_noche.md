@@ -5,7 +5,10 @@ year_published: 2011
 date_read: 2023-08-20
 rating: 5
 pages: 376
-tags: []
+tags: 
+ - "no ficción"
+ - "francia"
+ - "memorias"
 ---
 
 Últimamente, leía y oía hablar mucho de Delphine de Vigan. Me decidí con este para empezar con la autora francesa y me ha parecido una obra muy intensa e imagino muy dura de construir. 

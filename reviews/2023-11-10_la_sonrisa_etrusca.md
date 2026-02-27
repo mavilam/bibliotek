@@ -5,7 +5,9 @@ year_published: 1985
 date_read: 2023-11-10
 rating: 3
 pages: 347
-tags: []
+tags: 
+ - "novela"
+ - "italia"
 ---
 
 Múltiples veces durante la vida aparece el pensamiento que no dice que ya está, que todo está dicho y que lo que resta de nuestra existencia va a ser una línea recta con pocas variaciones: nuestras relaciones sociales están muy asentadas como para añadir nuevos círculos estrechos, somos lo suficientemente mayores para hacer un cambio en la base de nuestras ideas y, probablemente, las metas más importantes de nuestra vida estén claras. Otras tantas veces esta situación se da la vuelta, pero cuando llega el ocaso de nuestra vida, lo normal es que estos aspectos sean algo definitivo.

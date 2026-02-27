@@ -5,7 +5,10 @@ year_published: 1922
 date_read: 2023-12-30
 rating: 5
 pages: 72
-tags: []
+tags: 
+ - "novela"
+ - "austria"
+ - "clásicos"
 ---
 
 No solemos pararnos a pensar en la influencia que tenemos en otros de manera no intencionada. Quizá sirves de referencia a ese chico que está haciendo las prácticas en tu empresa, quizá alguien que se cruza contigo a diario te recuerda con cariño desde que le ayudaste a recoger lo que llevaba en el bolso cuando se le cayó y se desparramó todo por el suelo ese día lluvioso o quizá la amiga de tu primo está encariñada contigo, sin que tú lo sepas, desde esa vez que cenasteis uno al lado del otro por casualidad y diste buena conversación. Hay tantas de estas historias que ignoramos, que se podría hacer una enorme antología, y Stefan Zweig escribe una de estas tan nítidamente que parece extraño que algo tan redondo se componga solo en 66 páginas.

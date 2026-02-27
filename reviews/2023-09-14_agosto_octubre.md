@@ -5,7 +5,10 @@ year_published: 2010
 date_read: 2023-09-14
 rating: 3
 pages: 146
-tags: []
+tags: 
+ - "novela"
+ - "españa"
+ - "coming-of-age"
 ---
 
 Qué etapa es la adolescencia. Pienso en lo difícil que es escribir sobre ella, la revisitamos con nuestra visión de adultos y nos sale lo que creemos que es un adolescente, no lo que es en realidad. En la novela se consigue plasmar las contradicciones de Tomás cuando entra de lleno en esos años confusos y violentos, de una manera ágil y con una prosa muy elegante.

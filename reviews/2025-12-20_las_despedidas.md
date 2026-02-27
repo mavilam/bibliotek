@@ -1,7 +1,7 @@
 ---
 title: "Las despedidas"
 author: "Jacobo Bergareche"
-year_published: 0
+year_published: 2023
 date_read: 2025-12-20
 rating: 3
 pages: 168

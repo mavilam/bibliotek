@@ -5,7 +5,10 @@ year_published: 2000
 date_read: 2023-08-22
 rating: 4
 pages: 172
-tags: []
+tags: 
+ - "francia"
+ - "no ficción"
+ - "crimen"
 ---
 
 Emmanuel Carrère siempre ha sido un eterno pendiente y después de haberme leído "La ciudad de los vivos" Nicola Lagioia, "El adversario" parecía buen punto de entrada, dado que mucha gente ha considerado que el libro de Lagioia bebe del de Carrère.

@@ -5,7 +5,9 @@ year_published: 2021
 date_read: 2023-12-07
 rating: 4
 pages: 180
-tags: []
+tags: 
+ - "novela"
+ - "estados unidos"
 ---
 
 Podria resumir intimidades como un diario de unos meses de la vida de la protagonista, una mujer que, tras la muerte de su padre, se muda a La Haya para trabajar como intérprete en el Tribunal superior. Ella se encuentra en una fase de cambio donde no sabe qué le depara la vida ni hacia que dirección dirigirse, por lo que asume cada elemento en su vida como temporal.  A medida que avanza la historia, se exploran sus problemas con Adriaan, un hombre con conflictos matrimoniales, conocemos los entresijos del tribunal y la cantidad de detalles que componen el oficio de intérprete y, subyacentemente, vemos los problemas que tiene al ser una persona sin arraigo a una ciudad, es decir, la falta de familia y amigos cercanos. 

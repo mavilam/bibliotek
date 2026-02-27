@@ -5,7 +5,11 @@ year_published: 2020
 date_read: 2023-10-26
 rating: 2
 pages: 1424
-tags: []
+tags: 
+ - "fantasía"
+ - "novela"
+ - "estados unidos"
+ - "el archivo de las tormentas"
 ---
 
 Está claro que Brandon Sanderson tiene grandes virtudes que le han llevado a ser uno de los escritores de fantasía épica más leídos actualmente. Entre ellas están la capacidad de crear universos, que no mundos, desde cero, con millones de detalles, y la capacidad de escribir finales que te generan un ansia por la que no puedes dejar el libro hasta acabarlo. Sin embargo, de los que he leído, este es su peor libro con diferencia.

@@ -5,7 +5,9 @@ year_published: 1999
 date_read: 2023-09-22
 rating: 4
 pages: 192
-tags: []
+tags: 
+ - "españa"
+ - "no ficción"
 ---
 
 Historias de Londres es una gran guía de viaje, sin de ninguna manera querer serlo, por eso encuentras entre sus páginas lugares que no encontrarías en una. Como en otros de sus libros, la mezcla de anécdotas históricas de la ciudad, introducciones pintorescas de los barrios que la componen, historias del fútbol local y alguna que otra aventura personal, se convierte en un texto delicioso. Enric González tiene un estilo de escritura muy ágil de leer y lleno de ironía, que unido a la brevedad del libro, te deja con ganas de más. Se puede notar en su narración que ama profundamente la ciudad. 
