@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Estadísticas — Bibliotek{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta property="og:title" content="Estadísticas — Bibliotek">
+    <meta property="og:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Estadísticas — Bibliotek">
+    <meta name="twitter:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta name="twitter:image" content="{{ base_url }}/assets/card.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="stats-main-content">
+            <nav class="homie"><a href="{{ base_url }}/index.html">inicio</a></nav>
+
+            <section class="page-header">
+                <h1>Estadísticas</h1>
+                <p class="stats-subtitle">He reseñado un total de {{ total_books }} libros entre {{ first_year }} y {{ last_year }}.</p>
+            </section>
+            
+            <!-- ── Books per year ────────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Libros por año</h2>
+                <div class="canvas-wrap"><canvas id="chart-per-year"></canvas></div>
+            </section>
+
+            <!-- ── Publication decade ────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Año de publicación</h2>
+                <div class="canvas-wrap"><canvas id="chart-pub-decades"></canvas></div>
+            </section>
+
+            <!-- ── Top tags ──────────────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Etiquetas más frecuentes</h2>
+                <div class="canvas-wrap canvas-wrap--tall"><canvas id="chart-tags"></canvas></div>
+            </section>
+        </div>
+
+    </main>
+    <script>
+    (function () {
+        const ACCENT  = '#d4a017';
+        const MUTED   = '#8abfb0';
+        const SURFACE = '#1a1b1c';
+        const TAGBG   = '#1e2e2a';
+        const TEXT    = '#d4fff0';
+        const GREEN   = '#2a6048';
+
+        Chart.defaults.color = MUTED;
+        Chart.defaults.font.family = "Georgia, 'Times New Roman', serif";
+        Chart.defaults.font.size   = 12;
+
+        const gridOpts = {
+            color: TAGBG,
+            drawBorder: false,
+        };
+
+        const tickOpts = { color: MUTED };
+
+        // ── Books per year ──────────────────────────────────────
+        new Chart(document.getElementById('chart-per-year'), {
+            type: 'bar',
+            data: {
+                labels: {{ per_year_labels | json_encode() | safe }},
+                datasets: [{
+                    data: {{ per_year_counts | json_encode() | safe }},
+                    backgroundColor: TAGBG,
+                    hoverBackgroundColor: ACCENT,
+                    borderRadius: 3,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const avgs = {{ per_year_avgs | json_encode() | safe }};
+                                return ` ${ctx.parsed.y} libros · ✦ ${avgs[ctx.dataIndex]}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: tickOpts },
+                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
+                }
+            }
+        });
+
+        // ── Publication decade ──────────────────────────────────
+        new Chart(document.getElementById('chart-pub-decades'), {
+            type: 'line',
+            data: {
+                labels: {{ pub_decade_labels | json_encode() | safe }},
+                datasets: [{
+                    data: {{ pub_decade_counts | json_encode() | safe }},
+                    borderColor: ACCENT,
+                    backgroundColor: TAGBG,
+                    pointBackgroundColor: ACCENT,
+                    pointBorderColor: '#131414',
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: { label: (ctx) => ` ${ctx.parsed.y} libros` }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: tickOpts },
+                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
+                }
+            }
+        });
+
+        // ── Top tags ────────────────────────────────────────────
+        new Chart(document.getElementById('chart-tags'), {
+            type: 'bar',
+            data: {
+                labels: {{ tag_labels | json_encode() | safe }},
+                datasets: [{
+                    data: {{ tag_counts | json_encode() | safe }},
+                    backgroundColor: GREEN,
+                    hoverBackgroundColor: MUTED,
+                    borderRadius: 3,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: { label: (ctx) => ` ${ctx.parsed.x} libros` }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true },
+                    y: { grid: { display: false }, ticks: tickOpts }
+                }
+            }
+        });
+    })();
+    </script>
+{% endblock %}

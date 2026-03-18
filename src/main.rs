@@ -40,6 +40,8 @@ struct ReviewInfo {
     year_published: u32,
     year_read: u32,
     date_read: String,
+    rating: u8,
+    tags: Vec<String>,
     path: String,
     filename: String,
 }
@@ -58,6 +60,8 @@ impl ReviewInfo {
             year_published: metadata.year_published,
             year_read,
             date_read: metadata.date_read,
+            rating: metadata.rating,
+            tags: metadata.tags,
             path,
             filename,
         }
@@ -73,6 +77,8 @@ struct SectionInfo {
 }
 
 const BASE_URL: &str = "https://mavilam.github.io/bibliotek";
+// Until 2023 I was not consistent writing up reviews.
+const START_YEAR: u32 = 2023;
 
 static OUTPUT_DIR: OnceLock<PathBuf> = OnceLock::new();
 
@@ -151,6 +157,7 @@ fn main() {
 
     // Render main entrance
     render_all_reviews_section(&tera, &all_reviews);
+    render_analytics(&tera, &all_reviews);
     render_index(&tera, &all_sections);
 }
 
@@ -296,6 +303,99 @@ fn render_review(path: &Path, tera: &Tera) -> Option<ReviewInfo> {
     let path_str = relative_html_path(path);
 
     Some(ReviewInfo::new(path_str, filename, metadata))
+}
+
+fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
+    let css_path = css_path_for_output(input_dir());
+    let page_url = format!("{}/analytics.html", BASE_URL);
+
+    let total_books = reviews.len();
+    let current_year = reviews
+        .iter()
+        .map(|r| r.year_read)
+        .max()
+        .unwrap_or(START_YEAR);
+
+    let (per_year_labels, per_year_counts, per_year_avgs) =
+        books_per_year(reviews, current_year);
+    let (pub_decade_labels, pub_decade_counts) = books_per_decade(reviews);
+    let (tag_labels, tag_counts) = top_tags(reviews);
+
+    let mut context = Context::new();
+    context.insert("css_path", &css_path);
+    context.insert("base_url", BASE_URL);
+    context.insert("page_url", &page_url);
+    context.insert("total_books", &total_books);
+    context.insert("first_year", &START_YEAR);
+    context.insert("last_year", &current_year);
+    context.insert("per_year_labels", &per_year_labels);
+    context.insert("per_year_counts", &per_year_counts);
+    context.insert("per_year_avgs", &per_year_avgs);
+    context.insert("pub_decade_labels", &pub_decade_labels);
+    context.insert("pub_decade_counts", &pub_decade_counts);
+    context.insert("tag_labels", &tag_labels);
+    context.insert("tag_counts", &tag_counts);
+
+    let content = tera
+        .render("stats.html", &context)
+        .expect("Error rendering analytics template");
+    write_file(&input_dir().join("stats.html"), content);
+}
+
+// ============================================================
+// Analytics Helper Functions
+// ============================================================
+
+fn books_per_year(
+    reviews: &[ReviewInfo],
+    current_year: u32,
+) -> (Vec<String>, Vec<usize>, Vec<String>) {
+    let mut by_year: BTreeMap<u32, Vec<u8>> = BTreeMap::new();
+    for r in reviews {
+        by_year.entry(r.year_read).or_default().push(r.rating);
+    }
+    by_year.retain(|y, _| *y >= START_YEAR && *y <= current_year);
+    let labels = by_year.keys().map(|y| y.to_string()).collect();
+    let counts = by_year.values().map(|v| v.len()).collect();
+    let avgs = by_year
+        .values()
+        .map(|v| {
+            let avg = v.iter().map(|&r| r as f64).sum::<f64>() / v.len() as f64;
+            format!("{:.2}", avg)
+        })
+        .collect();
+    (labels, counts, avgs)
+}
+
+fn books_per_decade(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {
+    let mut by_decade: BTreeMap<u32, usize> = BTreeMap::new();
+    for r in reviews {
+        // Integer division truncates toward zero (e.g. 1993 → 1990)
+        let decade = (r.year_published / 10) * 10;
+        *by_decade.entry(decade).or_default() += 1;
+    }
+    let labels = by_decade.keys().map(|d| d.to_string()).collect();
+    let counts = by_decade.values().copied().collect();
+    (labels, counts)
+}
+
+fn top_tags(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {
+    let mut tag_map: BTreeMap<String, usize> = BTreeMap::new();
+    for r in reviews {
+        for tag in &r.tags {
+            *tag_map.entry(tag.clone()).or_default() += 1;
+        }
+    }
+    let mut tag_vec: Vec<(String, usize)> = tag_map.into_iter().collect();
+    tag_vec.sort_by(|a, b| b.1.cmp(&a.1));
+    tag_vec.truncate(12);
+    // Chart.js horizontal bars look best with highest value at the top,
+    // but for readability with indexAxis:'y' we reverse so the largest
+    // bar appears at the top of the canvas.
+    tag_vec.reverse();
+    let labels = tag_vec.iter().map(|(t, _)| t.clone()).collect();
+    let counts = tag_vec.iter().map(|(_, c)| *c).collect();
+    (labels, counts)
 }
 
 // ============================================================

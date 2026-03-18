@@ -8,4 +8,6 @@ Recuerdo haber escrito reseñas de manera intermintente, unas veces en papel, ot
 
 Además, siempre he querido darle un sentido a las lecturas que elijo, por lo que voy a intentar seguir ciertos senderos lectores para intentar elegir más fácilmente los siguientes libros que leer.
 
+Si sientes una curiosidad cuantitativa por mis lecturas, puedes ver mi [estadísticas](./stats.html).
+
 _Esta página está en constante construcción_
