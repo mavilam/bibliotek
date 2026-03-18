@@ -179,10 +179,6 @@ blockquote {
     line-height: 1.6;
 }
 
-.meta span + span::before {
-    content: " · ";
-}
-
 .rating {
     color: var(--txt-accent);
     letter-spacing: 0.05em;
@@ -227,6 +223,10 @@ blockquote {
 hr.review-divider {
     border: none;
     border-top: 1px solid var(--tag-bg);
+}
+
+.stats-main-content {
+    margin-bottom: 4rem;
 }
 
 .footer {

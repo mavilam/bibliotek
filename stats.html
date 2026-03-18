@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas — Bibliotek</title>
+    
+    <meta name="description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta property="og:title" content="Estadísticas — Bibliotek">
+    <meta property="og:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Estadísticas — Bibliotek">
+    <meta name="twitter:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek&#x2F;analytics.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <main>
+        <div class="stats-main-content">
+            <nav class="homie"><a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/index.html">inicio</a></nav>
+
+            <section class="page-header">
+                <h1>Estadísticas</h1>
+                <p class="stats-subtitle">He reseñado un total de 133 libros entre 2023 y 2026.</p>
+            </section>
+            
+            <!-- ── Books per year ────────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Libros por año</h2>
+                <div class="canvas-wrap"><canvas id="chart-per-year"></canvas></div>
+            </section>
+
+            <!-- ── Publication decade ────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Año de publicación</h2>
+                <div class="canvas-wrap"><canvas id="chart-pub-decades"></canvas></div>
+            </section>
+
+            <!-- ── Top tags ──────────────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Etiquetas más frecuentes</h2>
+                <div class="canvas-wrap canvas-wrap--tall"><canvas id="chart-tags"></canvas></div>
+            </section>
+        </div>
+
+    </main>
+    <script>
+    (function () {
+        const ACCENT  = '#d4a017';
+        const MUTED   = '#8abfb0';
+        const SURFACE = '#1a1b1c';
+        const TAGBG   = '#1e2e2a';
+        const TEXT    = '#d4fff0';
+        const GREEN   = '#2a6048';
+
+        Chart.defaults.color = MUTED;
+        Chart.defaults.font.family = "Georgia, 'Times New Roman', serif";
+        Chart.defaults.font.size   = 12;
+
+        const gridOpts = {
+            color: TAGBG,
+            drawBorder: false,
+        };
+
+        const tickOpts = { color: MUTED };
+
+        // ── Books per year ──────────────────────────────────────
+        new Chart(document.getElementById('chart-per-year'), {
+            type: 'bar',
+            data: {
+                labels: ["2023","2024","2025","2026"],
+                datasets: [{
+                    data: [40,36,36,9],
+                    backgroundColor: TAGBG,
+                    hoverBackgroundColor: ACCENT,
+                    borderRadius: 3,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const avgs = ["3.75","3.31","3.44","3.78"];
+                                return ` ${ctx.parsed.y} libros · ✦ ${avgs[ctx.dataIndex]}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: tickOpts },
+                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
+                }
+            }
+        });
+
+        // ── Publication decade ──────────────────────────────────
+        new Chart(document.getElementById('chart-pub-decades'), {
+            type: 'line',
+            data: {
+                labels: ["1550","1860","1870","1880","1910","1920","1930","1940","1950","1960","1970","1980","1990","2000","2010","2020","2940"],
+                datasets: [{
+                    data: [1,1,4,3,2,3,6,6,4,6,4,6,13,11,30,32,1],
+                    borderColor: ACCENT,
+                    backgroundColor: TAGBG,
+                    pointBackgroundColor: ACCENT,
+                    pointBorderColor: '#131414',
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: { label: (ctx) => ` ${ctx.parsed.y} libros` }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: tickOpts },
+                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
+                }
+            }
+        });
+
+        // ── Top tags ────────────────────────────────────────────
+        new Chart(document.getElementById('chart-tags'), {
+            type: 'bar',
+            data: {
+                labels: ["cómic","austria","filosofía","clásico","francia","en inglés","memorias","estados unidos","clásicos","españa","no ficción","novela"],
+                datasets: [{
+                    data: [5,5,6,7,8,9,11,16,16,19,24,53],
+                    backgroundColor: GREEN,
+                    hoverBackgroundColor: MUTED,
+                    borderRadius: 3,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: { label: (ctx) => ` ${ctx.parsed.x} libros` }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true },
+                    y: { grid: { display: false }, ticks: tickOpts }
+                }
+            }
+        });
+    })();
+    </script>
+
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+</body>
+</html>
