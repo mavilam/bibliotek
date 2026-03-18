@@ -1,7 +1,7 @@
 ---
 title: "El espacio de la imaginación: El ensayo de George Orwell En el vientre de la ballena"
 author: "Ian McEwan"
-year_published: 0
+year_published: 2022
 date_read: 2024-02-06
 rating: 4
 pages: 72

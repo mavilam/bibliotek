@@ -1,7 +1,7 @@
 ---
 title: "Loops: El universo y sus teorías: una conversación con Carlo Rovelli"
 author: "Luca Pozzi"
-year_published: 0
+year_published: 2024
 date_read: 2025-10-24
 rating: 4
 pages: 168

@@ -1,7 +1,7 @@
 ---
 title: "Aprendizaje infinito: Una guía imperfecta para crear y recorrer tu propio camino"
 author: "Sergio San Juan"
-year_published: 0
+year_published: 2025
 date_read: 2025-04-17
 rating: 5
 pages: 224
