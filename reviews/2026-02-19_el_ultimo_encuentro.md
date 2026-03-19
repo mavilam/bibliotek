@@ -1,7 +1,7 @@
 ---
 title: "El último encuentro"
 author: "Sándor Márai"
-year_published: 2942
+year_published: 1941
 date_read: 2026-02-19
 rating: 4
 pages: 192
