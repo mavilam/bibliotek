@@ -5,7 +5,11 @@ year_published: 2021
 date_read: 2023-11-13
 rating: 4
 pages: 233
-tags: []
+tags:
+ - "españa"
+ - "historia del arte"
+ - "divulgación"
+ - "no ficción"
 ---
 
 Entre tanta bibliografía dedicada a la historia del arte, muchas veces de manera poco accesible, Otra historia del arte me ha parecido un libro de divulgación bastante bueno para acercarse al arte desde un punto de vista diferente al que dicta la corriente de opinión general. 

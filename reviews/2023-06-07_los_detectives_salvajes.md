@@ -8,6 +8,8 @@ pages: 624
 tags: 
  - "novela"
  - "realismo mágico"
+ - "chile"
+ - "méxico"
  - "latinoamérica"
 ---
 

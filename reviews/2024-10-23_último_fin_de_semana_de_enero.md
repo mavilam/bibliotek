@@ -5,7 +5,9 @@ year_published: 2022
 date_read: 2024-10-23
 rating: 3
 pages: 190
-tags: []
+tags:
+ - "francia"
+ - "cómic"
 ---
 
 Denis es un dibujante de comics que vive instalado en la monotonía. Se podría hasta decir que no tiene ganas de vivir. Pasa su día a día sin más aliciente que el de ver pasar el tiempo, sin nada que le motive o le alegre en exceso. En una de sus firmas, conoce a Vanessa, la mujer de un amante de los comics que viene a que Denis le firme su último trabajo. Vanessa va a ser el gancho que saque a Denis de su tediosa existencia.

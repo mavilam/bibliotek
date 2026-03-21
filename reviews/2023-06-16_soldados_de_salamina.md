@@ -5,7 +5,10 @@ year_published: 2001
 date_read: 2023-06-16
 rating: 5
 pages: 216
-tags: []
+tags:
+ - "novela"
+ - "españa"
+ - "no ficción"
 ---
 
 Siguiendo con mi etapa de obsesión con Roberto Bolaño, cogí este libro, un eterno pendiente, sabiendo que, en la última parte del libro, Bolaño tenía un papel determinante. Obvio que he disfrutado ese episodio en el que los dos escritores conversan, pero es que todo el libro es de una calidad muy alta. 

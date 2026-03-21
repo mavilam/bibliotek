@@ -5,7 +5,9 @@ year_published: 2010
 date_read: 2023-03-09
 rating: 4
 pages: 428
-tags: []
+tags:
+ - "francia"
+ - "novela"
 ---
 
 Jed es un artista poco común, no acude a exposiciones, no va a fiestas y no tiene grandes contactos en la industria ni aspira a tenerlos. Es melancólico y no tiene grandes pulsiones. Llega a la fama a través de una colección de fotografías de la famosa Guía Michelín y consigue el éxito económico con una colección de obras centradas en personas realizando sus oficios, que, en la visión de Houellebecq, dan forma a las personas, hacen que seamos quienes somos. 

@@ -5,7 +5,10 @@ year_published: 1963
 date_read: 2021-06-30
 rating: 4
 pages: 384
-tags: []
+tags:
+  - "estados unidos"
+  - "novela"
+  - "memorias"
 ---
 
 

@@ -5,7 +5,9 @@ year_published: 2016
 date_read: 2023-01-31
 rating: 3
 pages: 176
-tags: []
+tags:
+ - "japon"
+ - "novela"
 ---
 
 Keiko nunca ha sido una persona como el resto, no ha hecho las cosas como son dictadas por los estándares sociales. Por eso cuando consigue un trabajo en un supermercado 24 horas y se ve aprobada por sus clientes y compañeros, siente que ha encontrado su sitio. Su cuerpo vive en total sintonía con la tienda: los sonidos del día a día son música para sus oídos, entiende como funciona cada centímetro del establecimiento incluso se cuida físicamente sólo para dar su mayor rendimiento en la tienda.

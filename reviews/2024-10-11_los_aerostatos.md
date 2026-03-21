@@ -5,7 +5,10 @@ year_published: 2020
 date_read: 2024-10-11
 rating: 3
 pages: 144
-tags: []
+tags:
+ - "belgica"
+ - "novela"
+ - "literatura"
 ---
 
 La última de las novelas cortas de Amelie Nothomb me ha resultado un curioso divertimento. Una estudiante empieza a dar clase de literatura al hijo de un antipático ricachón para ganar algo de dinero y evitar el suspenso del adolescente en una asignatura que se le está atragantando. 

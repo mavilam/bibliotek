@@ -5,7 +5,10 @@ year_published: 2011
 date_read: 2023-03-23
 rating: 4
 pages: 164
-tags: []
+tags:
+ - "chile"
+ - "novela"
+ - "memorias"
 ---
 
 Entre la novela y el diario personal metaliterario y marcado por la dictadura de Pinochet, Zambra me vuelve a dejar con la impresión de que tiene una capacidad especial, un estilo muy personal, para escribir pensamientos y sentimientos complejos en frases muy sencillas. Por eso cada libro se convierte en un cúmulo de párrafos subrayados que te piden una relectura.

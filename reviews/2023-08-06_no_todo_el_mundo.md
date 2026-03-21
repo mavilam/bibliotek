@@ -5,7 +5,9 @@ year_published: 2023
 date_read: 2023-08-06
 rating: 5
 pages: 212
-tags: []
+tags:
+ - "españa"
+ - "relatos"
 ---
 
 Había una pregunta constantemente en mi cabeza  mientras leía cada relato: ¿Cómo es capaz de contar lo que sienten con letras? Me recuerda mucho a Alejandro Zambra haciendo parecer sencillo lo que es tan difícil: poner en palabras el lo que está dentro de una persona. O de dos.

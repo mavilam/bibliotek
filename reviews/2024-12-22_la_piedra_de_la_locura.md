@@ -5,7 +5,9 @@ year_published: 2021
 date_read: 2024-12-22
 rating: 3
 pages: 71
-tags: []
+tags:
+ - "no ficción"
+ - "chile"
 ---
 
 Benjamín Labatut es uno de los autores que más me obsesionan últimamente, y La piedra de la locura era el único de sus libros que me quedaba por leer. Reconozco que este libro, compuesto por dos ensayos, puede no ser para todo el mundo: el estilo y la propuesta del texto pueden resultar algo caóticos. Sin embargo, personalmente disfruto mucho escuchando y leyendo a personas interesantes que divagan.

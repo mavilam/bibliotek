@@ -5,7 +5,9 @@ year_published: 2017
 date_read: 2024-01-26
 rating: 3
 pages: 216
-tags: []
+tags:
+ - "francia"
+ - "cómic"
 ---
 
 Llegué a este cómic después de haber visto 'Falcon Lake', la primera película de la canadiense Charlotte Le Bon que hace una adaptación muy libre de este. 

@@ -5,7 +5,10 @@ year_published: 1995
 date_read: 2023-12-31
 rating: 4
 pages: 329
-tags: []
+tags:
+ - "portugal"
+ - "novela"
+ - "distopia"
 ---
 
 Ensayo sobre la ceguera comienza con un hombre perdiendo el sentido de la vista y siendo sustituido por una imagen estática blanca. A este hombre le ayuda otro a llegar a casa y, una vez allí, decide ir al oftalmólogo para intentar saber qué le pasa. Cuando su mujer busca el coche se da cuenta de que el buen samaritano resulta ser un ladrón. El día siguiente, tanto el médico como el ladrón también están ciegos y los tres son trasladados a un pabellón de aislamiento junto a la mujer del médico, que sí puede ver.

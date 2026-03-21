@@ -5,7 +5,11 @@ year_published: 1957
 date_read: 2023-11-29
 rating: 3
 pages: 272
-tags: []
+tags:
+ - "estados unidos"
+ - "novela"
+ - "suspense"
+ - "crimen"
 ---
 
 Los libros de Patricia Highsmith están clasificados dentro del género suspense y misterio, pero, para mí, lo que hace de la una autora una excelente contadora de historias es el perfil psicológico que compone con cada personaje que crea. En este caso, el matrimonio protagonista. Él es un editor de libros para eruditos, interesado en la crianza de caracoles y en refutar publicaciones científicas sobre pulgas usando su propio cuerpo como parte del experimento. Ella, una mujer que le es infiel a su marido delante de sus narices sin preocuparse por lo que él o sus vecinos y amigos piensen, le encanta ir a fiestas y beber un poco más de la cuenta.

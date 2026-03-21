@@ -5,7 +5,11 @@ year_published: 2002
 date_read: 2024-09-18
 rating: 3
 pages: 121
-tags: []
+tags: 
+ - "novela"
+ - "chile"
+ - "méxico"
+ - "latinoamérica"
 ---
 
 En Una Novelita Lumpen Bolaño aparta su protagonista, normalmente un hombre para abordar una narrativa autobiográfica, y coloca a una adolescente en la primera linea. Esto no hace que cambie su estilo: crudo y directo, pero sin ahorrarse ninguno de los bucles mentales que tienen los personajes. 

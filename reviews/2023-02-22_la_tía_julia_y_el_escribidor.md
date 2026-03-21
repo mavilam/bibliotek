@@ -5,7 +5,9 @@ year_published: 1977
 date_read: 2023-02-22
 rating: 3
 pages: 576
-tags: []
+tags:
+ - "perú"
+ - "novela"
 ---
 
 Hacía mucho que no leía a Vargas Llosa y me he encontrado con una novela sobre unos personajes con personalidades muy fuertes y una Lima con vida propia, llena de cafés, tabaco, cines y fiesta. Por otra parte el conflicto principal no me ha enganchado completamente, quizá por ya conocer el desenlace.

@@ -5,7 +5,9 @@ year_published: 2001
 date_read: 2023-03-28
 rating: 3
 pages: 320
-tags: []
+tags:
+ - "francia"
+ - "novela"
 ---
 
 Me gusta la escritura de Houellebecq, me encanta cuando se pone filosófico y escribe largos soliloquios sobre, lo que él piensa que es, la decadencia de occidente, el rumbo hacia la perdición de Francia o por qué el sexo ya no es satisfactorio en la sociedad actual. Para mí, esa es la clave de sus libros, estar en una historia y de repente encontrarte una crítica a cualquier tema contingente de esa historia. Me gusta pensar que el autor lo que quiere es dar su opinión sobre temas y las tramas solo son macguffins. Y me da más aún esa impresión, cuando en muchas de sus novelas el narrador está en primera persona. Opinión, por otro lado, con la que puedes estar de acuerdo o que te parezca una soberana chorrada, pero con sus ideas polémicas y directas, te hace plantearte el tema. Además, creo que es capaz de recolectar el hastío de cierta parte de la sociedad que se ve reflejada en sus reflexiones.
