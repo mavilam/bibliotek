@@ -9,6 +9,7 @@
     --txt-normal:     1.125rem;
     --txt-big:        1.5rem;
     --txt-small:      0.95rem;
+    --txt-tiny:       0.8rem;
     --txt-title:      2rem;
 
     --content-width:  680px;
@@ -225,10 +226,6 @@ hr.review-divider {
     border-top: 1px solid var(--tag-bg);
 }
 
-.stats-main-content {
-    margin-bottom: 4rem;
-}
-
 .footer {
     margin-top: 1rem;
 }
@@ -238,6 +235,82 @@ hr.review-divider {
     color: var(--txt-muted);
     font-style: italic;
     margin-bottom: 0;
+}
+
+.stats-main-content {
+    margin-bottom: 4rem;
+}
+
+.stats-subtitle {
+    margin-bottom: 0;
+}
+
+.suggestion-section a {
+    font-style: italic;
+}
+
+.suggestion-section p {
+    margin-bottom: 0;
+}
+
+/* — Leaderboard — */
+
+.leaderboard {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.leaderboard__row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.leaderboard__header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.leaderboard__rank {
+    font-size: var(--txt-small);
+    flex-shrink: 0;
+}
+
+.leaderboard__name {
+    font-size: var(--txt-small);
+    color: var(--txt-white);
+}
+
+.leaderboard__track {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.leaderboard__bar-wrap {
+    background-color: #1e2e2a;
+    border-radius: 2px;
+    height: 6px;
+}
+
+.leaderboard__bar {
+    height: 100%;
+    background-color: var(--txt-accent);
+    border-radius: 2px;
+    min-width: 4px;
+}
+
+.leaderboard__count {
+    font-size: var(--txt-tiny);
+    color: var(--txt-muted);
+    text-align: right;
+    white-space: nowrap;
 }
 
 /* — Responsive — */
