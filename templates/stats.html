@@ -22,7 +22,9 @@
                 <h1>Estadísticas</h1>
                 <p class="stats-subtitle">He reseñado un total de {{ total_books }} libros entre {{ first_year }} y {{ last_year }}.</p>
             </section>
-            
+            <section class="suggestion-section">
+                <p>Si no sabes qué leer, podrías empezar por <a id="suggestion-link" href="#">…</a>.</p>
+            </section>
             <!-- ── Books per year ────────────────────────────────────── -->
             <section class="chart-section">
                 <h2>Libros por año</h2>
@@ -40,9 +42,44 @@
                 <h2>Etiquetas más frecuentes</h2>
                 <div class="canvas-wrap canvas-wrap--tall"><canvas id="chart-tags"></canvas></div>
             </section>
+
+            <!-- ── Top authors leaderboard ───────────────────────────── -->
+            <section class="chart-section">
+                <h2>Autores más leídos</h2>
+                <ol class="leaderboard">
+                    {% for name in top_author_names %}
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">{{ loop.index }}.</span>
+                            <span class="leaderboard__name">{{ name }}</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: {{ top_author_counts[loop.index0] * 100 / top_author_counts[0] }}%"></div>
+                            </div>
+                            <span class="leaderboard__count">{{ top_author_counts[loop.index0] }}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ol>
+            </section>
         </div>
 
     </main>
+    <!-- Separating scripts for better understanding -->
+    <!-- Suggestions -->
+    <script>
+    (function () {
+        const suggestions = {{ suggestion_list | json_encode() | safe }};
+        if (suggestions.length > 0) {
+            const [title, author, path] = suggestions[Math.floor(Math.random() * suggestions.length)];
+            const link = document.getElementById('suggestion-link');
+            link.href = path;
+            link.textContent = title + ' escrito por ' + author;
+        }
+    })();
+    </script>
+    <!-- Charts -->
     <script>
     (function () {
         const ACCENT  = '#d4a017';

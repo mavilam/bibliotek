@@ -316,11 +316,11 @@ fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
         .max()
         .unwrap_or(START_YEAR);
 
-    let (per_year_labels, per_year_counts, per_year_avgs) =
-        books_per_year(reviews, current_year);
+    let (per_year_labels, per_year_counts, per_year_avgs) = books_per_year(reviews, current_year);
     let (pub_decade_labels, pub_decade_counts) = books_per_decade(reviews);
     let (tag_labels, tag_counts) = top_tags(reviews);
-
+    let (top_author_names, top_author_counts) = top_authors(reviews);
+    let suggestions = five_stars(reviews);
     let mut context = Context::new();
     context.insert("css_path", &css_path);
     context.insert("base_url", BASE_URL);
@@ -328,6 +328,7 @@ fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
     context.insert("total_books", &total_books);
     context.insert("first_year", &START_YEAR);
     context.insert("last_year", &current_year);
+    context.insert("suggestion_list", &suggestions);
     context.insert("per_year_labels", &per_year_labels);
     context.insert("per_year_counts", &per_year_counts);
     context.insert("per_year_avgs", &per_year_avgs);
@@ -335,6 +336,8 @@ fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
     context.insert("pub_decade_counts", &pub_decade_counts);
     context.insert("tag_labels", &tag_labels);
     context.insert("tag_counts", &tag_counts);
+    context.insert("top_author_names", &top_author_names);
+    context.insert("top_author_counts", &top_author_counts);
 
     let content = tera
         .render("stats.html", &context)
@@ -344,7 +347,35 @@ fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
 
 // ============================================================
 // Analytics Helper Functions
+//
+// All functions return a tuple of (labels, counts).
 // ============================================================
+
+fn top_authors(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {
+    let mut by_author: BTreeMap<String, u8> = BTreeMap::new();
+    for r in reviews {
+        by_author
+            .entry(r.author.clone())
+            .and_modify(|c| *c += 1)
+            .or_insert(1);
+    }
+
+    let mut sorted: Vec<(String, u8)> = by_author.into_iter().collect();
+    sorted.sort_by(|a, b| b.1.cmp(&a.1));
+    sorted.truncate(10);
+
+    let labels = sorted.iter().map(|(k, _)| k.clone()).collect();
+    let counts = sorted.iter().map(|(_, v)| *v as usize).collect();
+    (labels, counts)
+}
+
+fn five_stars(reviews: &[ReviewInfo]) -> Vec<(String, String, String)> {
+    reviews
+        .iter()
+        .filter(|r| r.rating == 5)
+        .map(|r| (r.title.clone(), r.author.clone(), r.path.clone()))
+        .collect()
+}
 
 fn books_per_year(
     reviews: &[ReviewInfo],
@@ -372,7 +403,7 @@ fn books_per_decade(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {
     for r in reviews {
         // Integer division truncates toward zero (e.g. 1993 → 1990)
         let decade = (r.year_published / 10) * 10;
-        *by_decade.entry(decade).or_default() += 1;
+        by_decade.entry(decade).and_modify(|c| *c += 1).or_insert(1);
     }
     let labels = by_decade.keys().map(|d| d.to_string()).collect();
     let counts = by_decade.values().copied().collect();
@@ -383,13 +414,16 @@ fn top_tags(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {
     let mut tag_map: BTreeMap<String, usize> = BTreeMap::new();
     for r in reviews {
         for tag in &r.tags {
-            *tag_map.entry(tag.clone()).or_default() += 1;
+            tag_map
+                .entry(tag.clone())
+                .and_modify(|c| *c += 1)
+                .or_insert(1);
         }
     }
     let mut tag_vec: Vec<(String, usize)> = tag_map.into_iter().collect();
     tag_vec.sort_by(|a, b| b.1.cmp(&a.1));
     tag_vec.truncate(12);
-    // Chart.js horizontal bars look best with highest value at the top,
+    // Chart.js horizontal bars look better with highest value at the top,
     // but for readability with indexAxis:'y' we reverse so the largest
     // bar appears at the top of the canvas.
     tag_vec.reverse();
