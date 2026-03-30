@@ -1,11 +1,14 @@
 ---
-title: "Siete breves lecciones de física (Argumentos nº 497) (Spanish Edition)"
+title: "Siete breves lecciones de física"
 author: "Carlo Rovelli"
 year_published: 2014
 date_read: 2024-12-03
 rating: 5
 pages: 57
-tags: []
+tags:
+ - "no ficción"
+ - "italia"
+ - "física"
 ---
 
 En una búsqueda de libros que traten ciencia o historia de la ciencia, pero de una manera más novelada, llego a Carlo Rovelli, físico teórico y escritor. Rovelli es capaz de elaborar un libro de divulgación con un estilo narrativo muy interesante, lejos del estilo típico del ensayo y más cercano al del cuento, que te atrapa e invita a seguir leyendo.

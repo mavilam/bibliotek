@@ -5,7 +5,9 @@ year_published: 2020
 date_read: 2021-03-21
 rating: 5
 pages: 213
-tags: []
+tags:
+ - "no ficción"
+ - "chile"
 ---
 
-4.5 ⭐
+Totalmente maravillado con este libro, presiento que no es la última vez que lo leeré.

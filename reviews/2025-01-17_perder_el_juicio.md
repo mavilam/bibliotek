@@ -5,7 +5,9 @@ year_published: 2024
 date_read: 2025-01-17
 rating: 2
 pages: 136
-tags: []
+tags: 
+ - "novela"
+ - "argentina"
 ---
 
 Había leído varias reseñas muy positivas sobre Perder el juicio, el libro de Ariana Harwicz; así que cuando lo vi en la biblioteca, sabiendo que era un libro corto, decidí darle una oportunidad.

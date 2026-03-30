@@ -5,7 +5,9 @@ year_published: 2011
 date_read: 2024-08-13
 rating: 3
 pages: 200
-tags: []
+tags:
+ - "novela"
+ - "méxico"
 ---
 
 Guadalupe Nettel nos regala una novela autobiográfica que narra su proceso de crecimiento y autodescubrimiento a través de la relación con los diferentes entornos en los que vivió y de la relación con su familia. El libro me enganchó desde las primeras páginas, principalmente por su prosa ágil y entretenida.

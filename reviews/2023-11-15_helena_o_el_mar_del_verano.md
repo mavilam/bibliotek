@@ -5,7 +5,9 @@ year_published: 1952
 date_read: 2023-11-15
 rating: 2
 pages: 88
-tags: []
+tags:
+ - "novela"
+ - "españa"
 ---
 
 Al principio me pareció una narración muy evocadora de la inocencia de la infancia, el verano, la naturaleza y el amor, pero este tipo de libros tan líricos no es para mí. Creo que si lo hubiera leído de a poquito me hubiera gustado más, me gusta el lirismo en texto cortos (poesía, una columna, un capítulo), pero no consigo aguantar mucho tiempo leyendo algo más largo con ese tono. Al no haber entrado al juego de la novela, me daba la sensación de que había incoherencias en lo que el narrador contaba, como que a veces actúa como el niño que es, pero justo después te hace una disertación en latín sobre los textos de Virgilio.

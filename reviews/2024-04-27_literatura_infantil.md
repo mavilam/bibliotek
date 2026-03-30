@@ -5,7 +5,10 @@ year_published: 2023
 date_read: 2024-04-27
 rating: 3
 pages: 232
-tags: []
+tags:
+ - "no ficción"
+ - "chile"
+ - "memorias"
 ---
 
 Zambra agrupa una serie de textos escritos durante los primeros años de la vida de su hijo con la intención de dejarle a este pequeños ensayos y, en una segunda parte, una serie de relatos con vivencias familiares o de su juventud. Durante estos textos, Zambra se empieza a descubrir como padre y, de manera directa, se redescubre como hijo, cambiando el enfoque con el que veía a su padre en sus años de juventud.

@@ -5,7 +5,9 @@ year_published: 2018
 date_read: 2019-01-29
 rating: 3
 pages: 346
-tags: []
+tags:
+ - "novela"
+ - "estados unidos"
 ---
 
 En general es un libro bastante ameno y fácil de leer. Le cogí mucho cariño a Simon y a Klara, por lo que la parte de Daniel se me hizo algo lenta. La parte de Varya me irritó al principio pero acabé empatizando y disfrutando del final. 

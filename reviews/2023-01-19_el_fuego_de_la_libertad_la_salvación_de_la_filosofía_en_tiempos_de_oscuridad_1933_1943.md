@@ -5,7 +5,10 @@ year_published: 2020
 date_read: 2023-01-19
 rating: 4
 pages: 384
-tags: []
+tags:
+ - "no ficción"
+ - "alemania"
+ - "filosofía"
 ---
 
 Para mí, ha sido un buen punto introductorio a las brillantes vidas de las cuatro heroínas que de las que trata el ensayo, pero no puedo quitarme la espina de que si tuviera un mayor conocimiento filosófico me hubiera apasionado mucho más.
