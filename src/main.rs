@@ -23,6 +23,7 @@ struct ReviewMetadata {
     year_published: u32,
     date_read: String,
     rating: u8,
+    pages: u32,
     tags: Vec<String>,
 }
 
@@ -41,6 +42,7 @@ struct ReviewInfo {
     year_read: u32,
     date_read: String,
     rating: u8,
+    pages: u32,
     tags: Vec<String>,
     path: String,
     filename: String,
@@ -61,6 +63,7 @@ impl ReviewInfo {
             year_read,
             date_read: metadata.date_read,
             rating: metadata.rating,
+            pages: metadata.pages,
             tags: metadata.tags,
             path,
             filename,
@@ -316,8 +319,10 @@ fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
         .max()
         .unwrap_or(START_YEAR);
 
-    let (per_year_labels, per_year_counts, per_year_avgs) = books_per_year(reviews, current_year);
+    let (per_year_labels, per_year_counts, per_year_pages, per_year_avgs) =
+        books_per_year(reviews, current_year);
     let (pub_decade_labels, pub_decade_counts) = books_per_decade(reviews);
+    let types = book_types(reviews);
     let (tag_labels, tag_counts) = top_tags(reviews);
     let (top_author_names, top_author_counts) = top_authors(reviews);
     let suggestions = five_stars(reviews);
@@ -331,9 +336,11 @@ fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
     context.insert("suggestion_list", &suggestions);
     context.insert("per_year_labels", &per_year_labels);
     context.insert("per_year_counts", &per_year_counts);
+    context.insert("per_year_pages", &per_year_pages);
     context.insert("per_year_avgs", &per_year_avgs);
     context.insert("pub_decade_labels", &pub_decade_labels);
     context.insert("pub_decade_counts", &pub_decade_counts);
+    context.insert("types", &types);
     context.insert("tag_labels", &tag_labels);
     context.insert("tag_counts", &tag_counts);
     context.insert("top_author_names", &top_author_names);
@@ -380,22 +387,59 @@ fn five_stars(reviews: &[ReviewInfo]) -> Vec<(String, String, String)> {
 fn books_per_year(
     reviews: &[ReviewInfo],
     current_year: u32,
-) -> (Vec<String>, Vec<usize>, Vec<String>) {
-    let mut by_year: BTreeMap<u32, Vec<u8>> = BTreeMap::new();
+) -> (Vec<String>, Vec<usize>, Vec<u32>, Vec<String>) {
+    let mut by_year: BTreeMap<u32, Vec<(u8, u32)>> = BTreeMap::new();
     for r in reviews {
-        by_year.entry(r.year_read).or_default().push(r.rating);
+        let year_read = r.year_read;
+        if year_read >= START_YEAR && year_read <= current_year {
+            by_year
+                .entry(r.year_read)
+                .or_default()
+                .push((r.rating, r.pages));
+        }
     }
-    by_year.retain(|y, _| *y >= START_YEAR && *y <= current_year);
     let labels = by_year.keys().map(|y| y.to_string()).collect();
-    let counts = by_year.values().map(|v| v.len()).collect();
+    let total_books = by_year.values().map(|v| v.len()).collect();
+    let total_pages = by_year
+        .values()
+        .map(|v| v.iter().map(|&(_, p)| p).sum())
+        .collect();
     let avgs = by_year
         .values()
         .map(|v| {
-            let avg = v.iter().map(|&r| r as f64).sum::<f64>() / v.len() as f64;
+            let avg = v.iter().map(|&(r, _)| r as f64).sum::<f64>() / v.len() as f64;
             format!("{:.2}", avg)
         })
         .collect();
-    (labels, counts, avgs)
+
+    (labels, total_books, total_pages, avgs)
+}
+
+#[derive(Default, Serialize)]
+struct BookTypes {
+    novel: u16,
+    non_fiction: u16,
+    poetry: u16,
+    short_stories: u16,
+    other: u16,
+}
+
+fn book_types(reviews: &[ReviewInfo]) -> BookTypes {
+    let mut kinds = BookTypes::default();
+    for r in reviews {
+        if r.tags.iter().any(|t| t == "poesía") {
+            kinds.poetry += 1;
+        } else if r.tags.iter().any(|t| t == "novela") {
+            kinds.novel += 1;
+        } else if r.tags.iter().any(|t| t == "no ficción") {
+            kinds.non_fiction += 1;
+        } else if r.tags.iter().any(|t| t == "relatos") {
+            kinds.short_stories += 1;
+        } else {
+            kinds.other += 1;
+        }
+    }
+    kinds
 }
 
 fn books_per_decade(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {

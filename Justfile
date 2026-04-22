@@ -11,3 +11,7 @@ build-site:
 # Open the generated site in the default browser.
 open:
     open output/index.html
+
+# Both
+all:
+    cargo run --bin bibliotek; open output/index.html
