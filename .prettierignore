@@ -1,0 +1,2 @@
+# Tera templates — Prettier breaks {{ … | filter | safe }} across lines
+templates/**/*.html
