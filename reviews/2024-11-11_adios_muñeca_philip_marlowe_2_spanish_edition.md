@@ -17,4 +17,4 @@ Desde la primera página, la novela agarra sin darte tiempo ni a acomodarte, la 
 
 Una de las cosas que me ha llamado la atención es el cambio de Marlowe como personaje. En esta novela muestra una faceta más reflexiva y melancólica, parece como si entre las dos novelas algo le haya afectado intensamente. En algunos momentos, incluso rompe la cuarta pared para dirigirse directamente al lector. Además de la melancólica, se muestra la faceta conquistadora de Marlowe, aunque sin desvirtuar su esencia como un hombre fiel a su propio código moral.
 
-En resumen, Adiós, muñeca es continuista con El largo adiós, pero muestra una evolución de Marlowe. Seguiré leyendo.
+En resumen, Adiós, muñeca es continuista con El sueño eterno, pero muestra una evolución de Marlowe. Seguiré leyendo.
