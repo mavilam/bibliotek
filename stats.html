@@ -28,7 +28,7 @@
 
             <section class="page-header">
                 <h1>Estadísticas</h1>
-                <p class="stats-subtitle">He reseñado un total de 144 libros entre 2023 y 2026.</p>
+                <p class="stats-subtitle">He reseñado un total de 145 libros entre 2023 y 2026.</p>
             </section>
             <section class="suggestion-section">
                 <p>Si no sabes qué leer, podrías empezar por <a id="suggestion-link" href="#">…</a>.</p>
@@ -232,14 +232,14 @@
         const tickOpts = { color: MUTED };
 
         // ── Books per year ──────────────────────────────────────
-        const perYearPages = [11790,9041,7760,4081];
-        const perYearAvgs  = ["3.75","3.31","3.44","3.60"];
+        const perYearPages = [11790,9041,7760,4235];
+        const perYearAvgs  = ["3.75","3.31","3.44","3.52"];
         new Chart(document.getElementById('chart-per-year'), {
             type: 'bar',
             data: {
                 labels: ["2023","2024","2025","2026"],
                 datasets: [{
-                    data: [40,36,36,20],
+                    data: [40,36,36,21],
                     backgroundColor: TAGBG,
                     hoverBackgroundColor: ACCENT,
                     borderRadius: 3,
@@ -279,7 +279,7 @@
             data: {
                 labels: ["220","1550","1860","1870","1880","1910","1920","1930","1940","1950","1960","1970","1980","1990","2000","2010","2020"],
                 datasets: [{
-                    data: [1,1,1,6,3,2,3,6,7,5,6,4,6,15,11,32,35],
+                    data: [1,1,1,6,3,2,3,6,7,5,6,4,7,15,11,32,35],
                     borderColor: ACCENT,
                     backgroundColor: TAGBG,
                     pointBackgroundColor: ACCENT,
@@ -314,7 +314,7 @@
                 labels: ['Novela', 'No ficción', 'Poesía', 'Relatos', 'Otros'],
                 datasets: [{
                     data: [
-                        85,
+                        86,
                         37,
                         1,
                         7,
@@ -347,9 +347,9 @@
         new Chart(document.getElementById('chart-tags'), {
             type: 'bar',
             data: {
-                labels: ["italia","cómic","clásico","en inglés","francia","chile","memorias","clásicos","estados unidos","españa","no ficción","novela"],
+                labels: ["italia","cómic","clásico","en inglés","chile","francia","memorias","clásicos","estados unidos","españa","no ficción","novela"],
                 datasets: [{
-                    data: [8,8,8,10,12,12,16,16,21,34,38,85],
+                    data: [8,8,8,10,12,13,16,16,21,34,38,86],
                     backgroundColor: GREEN,
                     hoverBackgroundColor: MUTED,
                     borderRadius: 3,
