@@ -6,6 +6,7 @@ date_read: 2024-10-25
 rating: 4
 pages: 240
 tags: 
+ - "novela"
  - "novela negra"
  - "philip marlowe"
 ---

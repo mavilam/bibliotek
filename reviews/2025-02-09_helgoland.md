@@ -9,7 +9,7 @@ tags:
  - "física"
  - "mecánica cuántica"
  - "filosofía"
- - "ensayo"
+ - "no ficción"
 ---
 
 Desde que leí Siete breves lecciones sobre física, Carlo Rovelli pasó a interesarme enormemente. No sólo es que sea un físico que trabaja en uno de los proyectos más interesantes de la física moderna, sino también un divulgador con una sensibilidad especial y una visión del mundo que resuena profundamente en mí. En Helgoland, Rovelli explora la mecánica cuántica desde múltiples puntos de vista: histórico, teórico y filosófico.

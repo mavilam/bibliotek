@@ -6,9 +6,9 @@ date_read: 2024-12-17
 rating: 5
 pages: 483
 tags: 
+ - "no ficción"
  - "filosofía"
  - "montaigne"
- - "ensayo"
 ---
 
 Hace un par de años compré una edición de los ensayos de Montaigne que traía una selección de los, supuestamente, más importantes. De vez en cuando, cogía el libro y leía uno de ellos; algunos me gustaron y otros no llegué a entenderlos del todo, me faltaba información sobre el contexto del autor.

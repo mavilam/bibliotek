@@ -6,6 +6,7 @@ date_read: 2020-04-11
 rating: 4
 pages: 214
 tags: 
+ - "novela"
  - "japón"
 ---
 

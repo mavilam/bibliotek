@@ -415,12 +415,13 @@ fn books_per_year(
     (labels, total_books, total_pages, avgs)
 }
 
-#[derive(Default, Serialize)]
+#[derive(Debug, Default, Serialize)]
 struct BookTypes {
     novel: u16,
     non_fiction: u16,
     poetry: u16,
     short_stories: u16,
+    comic: u16,
     other: u16,
 }
 
@@ -435,6 +436,8 @@ fn book_types(reviews: &[ReviewInfo]) -> BookTypes {
             kinds.non_fiction += 1;
         } else if r.tags.iter().any(|t| t == "relatos") {
             kinds.short_stories += 1;
+        } else if r.tags.iter().any(|t| t == "cómic") {
+            kinds.comic += 1;
         } else {
             kinds.other += 1;
         }

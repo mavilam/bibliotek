@@ -6,6 +6,7 @@ date_read: 2024-11-11
 rating: 3
 pages: 483
 tags: 
+ - "novela"
  - "novela negra"
  - "raymond chandler"
  - "philip marlowe"
