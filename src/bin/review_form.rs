@@ -204,16 +204,16 @@ tags:
             .into_response();
     }
 
-    if let Some(parent) = filepath.parent() {
-        if let Err(e) = std::fs::create_dir_all(parent) {
-            return (
-                StatusCode::INTERNAL_SERVER_ERROR,
-                axum::Json(ErrorResponse {
-                    error: format!("Could not create directory: {}", e),
-                }),
-            )
-                .into_response();
-        }
+    if let Some(parent) = filepath.parent()
+        && let Err(e) = std::fs::create_dir_all(parent)
+    {
+        return (
+            StatusCode::INTERNAL_SERVER_ERROR,
+            axum::Json(ErrorResponse {
+                error: format!("Could not create directory: {}", e),
+            }),
+        )
+            .into_response();
     }
 
     if let Err(e) = std::fs::write(&filepath, content) {

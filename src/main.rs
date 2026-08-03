@@ -249,7 +249,7 @@ fn render_section(path: &Path, tera: &Tera, dir_reviews: &[ReviewInfo]) -> Optio
     let content = tera
         .render("section.html", &context)
         .expect("Error rendering template");
-    write_file(&path, content);
+    write_file(path, content);
 
     let relative_path = relative_html_path(path);
 
@@ -368,7 +368,7 @@ fn top_authors(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {
     }
 
     let mut sorted: Vec<(String, u8)> = by_author.into_iter().collect();
-    sorted.sort_by(|a, b| b.1.cmp(&a.1));
+    sorted.sort_by_key(|b| std::cmp::Reverse(b.1));
     sorted.truncate(10);
 
     let labels = sorted.iter().map(|(k, _)| k.clone()).collect();
@@ -468,7 +468,7 @@ fn top_tags(reviews: &[ReviewInfo]) -> (Vec<String>, Vec<usize>) {
         }
     }
     let mut tag_vec: Vec<(String, usize)> = tag_map.into_iter().collect();
-    tag_vec.sort_by(|a, b| b.1.cmp(&a.1));
+    tag_vec.sort_by_key(|b| std::cmp::Reverse(b.1));
     tag_vec.truncate(12);
     // Chart.js horizontal bars look better with highest value at the top,
     // but for readability with indexAxis:'y' we reverse so the largest
@@ -506,8 +506,7 @@ fn write_file(path: &Path, rendered: String) {
 fn css_path_for_output(path: &Path) -> String {
     let relative = path.strip_prefix(input_dir()).unwrap_or(path);
     let depth = relative.parent().map_or(0, |p| p.components().count());
-    std::iter::repeat("../")
-        .take(depth)
+    std::iter::repeat_n("../", depth)
         .chain(std::iter::once("index.css"))
         .collect()
 }

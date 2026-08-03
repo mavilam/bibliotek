@@ -28,9 +28,7 @@ impl GoodreadsRow {
         let rating = parse_u8(&self.my_rating).unwrap_or_default();
         let pages = parse_i32(&self.number_of_pages).unwrap_or_default();
         let date_read = normalize_date(&self.date_read);
-        let Some(review_body) = normalize_review_text(&self.my_review) else {
-            return None;
-        };
+        let review_body = normalize_review_text(&self.my_review)?;
 
         Some(format!(
             "---\n\
