@@ -313,6 +313,41 @@ hr.review-divider {
     white-space: nowrap;
 }
 
+/* — Stats index — */
+
+.stats-index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.stats-index-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.35rem 1rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--tag-bg);
+    border-radius: 6px;
+    color: var(--txt-white);
+    font-size: var(--txt-big);
+    text-decoration: none;
+    text-align: center;
+    transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+}
+
+.stats-index-card:hover {
+    border-color: var(--txt-accent);
+    color: var(--txt-accent);
+}
+
+.stats-index-card--featured {
+    grid-column: 1 / -1;
+    background: var(--tag-bg);
+    font-family: 'Vercetti', Georgia, serif;
+}
+
 /* — Responsive — */
 
 @media screen and (min-width: 1800px) {

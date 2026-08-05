@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas 2024 — Bibliotek</title>
+    
+    <meta name="description" content="Estadísticas de lectura de 2024 de Miguel Ávila Monroy">
+    <meta property="og:title" content="Estadísticas 2024 — Bibliotek">
+    <meta property="og:description" content="Estadísticas de lectura de 2024 de Miguel Ávila Monroy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Estadísticas 2024 — Bibliotek">
+    <meta name="twitter:description" content="Estadísticas de lectura de 2024 de Miguel Ávila Monroy">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek&#x2F;stats_2024.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <main>
+        <div class="stats-main-content">
+            <nav class="homie">
+                <a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/index.html">inicio</a>
+                · <a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/stats.html">estadísticas</a>
+            </nav>
+
+            <section class="page-header">
+                <h1>Estadísticas 2024</h1>
+                <p class="stats-subtitle">He reseñado un total de 36 libros en 2024.</p>
+            </section>
+
+            <!-- ── Publication decade ────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Año de publicación</h2>
+                <div class="canvas-wrap"><canvas id="chart-pub-decades"></canvas></div>
+            </section>
+
+            <!-- ── Book types ────────────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Clases de libros</h2>
+                <div class="canvas-wrap"><canvas id="chart-types"></canvas></div>
+            </section>
+
+            <!-- ── Top tags ──────────────────────────────────────────── -->
+            <section class="chart-section">
+                <h2>Etiquetas más frecuentes</h2>
+                <div class="canvas-wrap canvas-wrap--tall"><canvas id="chart-tags"></canvas></div>
+            </section>
+
+            <!-- ── Top authors leaderboard ───────────────────────────── -->
+            <section class="chart-section">
+                <h2>Autores más leídos</h2>
+                <ol class="leaderboard">
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">1.</span>
+                            <span class="leaderboard__name">Bastien Vivès</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 100%"></div>
+                            </div>
+                            <span class="leaderboard__count">2</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">2.</span>
+                            <span class="leaderboard__name">Benjamín Labatut</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 100%"></div>
+                            </div>
+                            <span class="leaderboard__count">2</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">3.</span>
+                            <span class="leaderboard__name">Raymond Chandler</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 100%"></div>
+                            </div>
+                            <span class="leaderboard__count">2</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">4.</span>
+                            <span class="leaderboard__name">Roberto Bolaño</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 100%"></div>
+                            </div>
+                            <span class="leaderboard__count">2</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">5.</span>
+                            <span class="leaderboard__name">Albert Camus</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 50%"></div>
+                            </div>
+                            <span class="leaderboard__count">1</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">6.</span>
+                            <span class="leaderboard__name">Alejandro Zambra</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 50%"></div>
+                            </div>
+                            <span class="leaderboard__count">1</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">7.</span>
+                            <span class="leaderboard__name">Amélie Nothomb</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 50%"></div>
+                            </div>
+                            <span class="leaderboard__count">1</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">8.</span>
+                            <span class="leaderboard__name">Antonio Velasco Piña</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 50%"></div>
+                            </div>
+                            <span class="leaderboard__count">1</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">9.</span>
+                            <span class="leaderboard__name">Benito Pérez Galdós</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 50%"></div>
+                            </div>
+                            <span class="leaderboard__count">1</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">10.</span>
+                            <span class="leaderboard__name">Carlo Rovelli</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 50%"></div>
+                            </div>
+                            <span class="leaderboard__count">1</span>
+                        </div>
+                    </li>
+                    
+                </ol>
+            </section>
+        </div>
+
+    </main>
+    <!-- Charts -->
+    <script>
+    (function () {
+        const ACCENT  = '#d4a017';
+        const MUTED   = '#8abfb0';
+        const SURFACE = '#1a1b1c';
+        const TAGBG   = '#1e2e2a';
+        const TEXT    = '#d4fff0';
+        const GREEN   = '#2a6048';
+
+        Chart.defaults.color = MUTED;
+        Chart.defaults.font.family = "Georgia, 'Times New Roman', serif";
+        Chart.defaults.font.size   = 12;
+
+        const gridOpts = {
+            color: TAGBG,
+            drawBorder: false,
+        };
+
+        const tickOpts = { color: MUTED };
+
+        // ── Publication decade ──────────────────────────────────
+        new Chart(document.getElementById('chart-pub-decades'), {
+            type: 'line',
+            data: {
+                labels: ["1860","1880","1910","1930","1940","1960","1970","1990","2000","2010","2020"],
+                datasets: [{
+                    data: [1,1,1,3,3,4,1,3,3,8,8],
+                    borderColor: ACCENT,
+                    backgroundColor: TAGBG,
+                    pointBackgroundColor: ACCENT,
+                    pointBorderColor: '#131414',
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: { label: (ctx) => ` ${ctx.parsed.y} libros` }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: tickOpts },
+                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
+                }
+            }
+        });
+
+        // ── Book types ──────────────────────────────────────────
+        new Chart(document.getElementById('chart-types'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Novela', 'No ficción', 'Poesía', 'Relatos', 'Otros'],
+                datasets: [{
+                    data: [
+                        17,
+                        14,
+                        0,
+                        2,
+                        0
+                    ],
+                    backgroundColor: [ACCENT, GREEN, MUTED, TAGBG, '#3a4a46'],
+                    borderColor: SURFACE,
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: TEXT } },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                                const pct = total ? Math.round((ctx.parsed / total) * 100) : 0;
+                                return ` ${ctx.label}: ${ctx.parsed} (${pct}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // ── Top tags ────────────────────────────────────────────
+        new Chart(document.getElementById('chart-tags'), {
+            type: 'bar',
+            data: {
+                labels: ["filosofía","biografía","belgica","francia","españa","cómic","estados unidos","chile","méxico","clásicos","no ficción","novela"],
+                datasets: [{
+                    data: [2,2,2,3,3,3,4,5,6,7,14,17],
+                    backgroundColor: GREEN,
+                    hoverBackgroundColor: MUTED,
+                    borderRadius: 3,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: { label: (ctx) => ` ${ctx.parsed.x} libros` }
+                    }
+                },
+                scales: {
+                    x: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true },
+                    y: { grid: { display: false }, ticks: tickOpts }
+                }
+            }
+        });
+    })();
+    </script>
+
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+</body>
+</html>
