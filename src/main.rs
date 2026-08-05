@@ -133,6 +133,8 @@ fn main() {
                         .get_mut(&current_dir)
                         .unwrap()
                         .push(path.to_path_buf());
+                } else {
+                    println!("A path didn't meet the conditions: {:?}", path)
                 }
             }
             Err(err) => eprintln!("There was an error: {err}"),
@@ -160,7 +162,12 @@ fn main() {
 
     // Render main entrance
     render_all_reviews_section(&tera, &all_reviews);
-    render_analytics(&tera, &all_reviews);
+    let mut analytics_pages: Vec<(u32, PathBuf)> = Vec::new();
+    analytics_pages.push((0, render_complete_analytics(&tera, &all_reviews)));
+    for (year, reviews) in group_reviews_by_year(&all_reviews) {
+        analytics_pages.push((year, render_year_analytics(&tera, year, &reviews)));
+    }
+    render_aggregated_analytics(&tera, analytics_pages);
     render_index(&tera, &all_sections);
 }
 
@@ -308,9 +315,10 @@ fn render_review(path: &Path, tera: &Tera) -> Option<ReviewInfo> {
     Some(ReviewInfo::new(path_str, filename, metadata))
 }
 
-fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
+fn render_complete_analytics(tera: &Tera, reviews: &[ReviewInfo]) -> PathBuf {
     let css_path = css_path_for_output(input_dir());
-    let page_url = format!("{}/analytics.html", BASE_URL);
+    let name = "stats_complete.html";
+    let page_url = format!("{}/{}", BASE_URL, name);
 
     let total_books = reviews.len();
     let current_year = reviews
@@ -349,7 +357,77 @@ fn render_analytics(tera: &Tera, reviews: &[ReviewInfo]) {
     let content = tera
         .render("stats.html", &context)
         .expect("Error rendering analytics template");
-    write_file(&input_dir().join("stats.html"), content);
+    let output_path = input_dir().join(name);
+    write_file(&output_path, content);
+    output_path
+}
+
+fn render_year_analytics(tera: &Tera, year: u32, reviews: &[ReviewInfo]) -> PathBuf {
+    let css_path = css_path_for_output(input_dir());
+    let name = format!("stats_{}.html", year);
+    let page_url = format!("{}/{}", BASE_URL, &name);
+
+    let total_books = reviews.len();
+    let (pub_decade_labels, pub_decade_counts) = books_per_decade(reviews);
+    let types = book_types(reviews);
+    let (tag_labels, tag_counts) = top_tags(reviews);
+    let (top_author_names, top_author_counts) = top_authors(reviews);
+    let mut context = Context::new();
+    context.insert("css_path", &css_path);
+    context.insert("base_url", BASE_URL);
+    context.insert("page_url", &page_url);
+    context.insert("year", &year);
+    context.insert("total_books", &total_books);
+    context.insert("pub_decade_labels", &pub_decade_labels);
+    context.insert("pub_decade_counts", &pub_decade_counts);
+    context.insert("types", &types);
+    context.insert("tag_labels", &tag_labels);
+    context.insert("tag_counts", &tag_counts);
+    context.insert("top_author_names", &top_author_names);
+    context.insert("top_author_counts", &top_author_counts);
+
+    let content = tera
+        .render("stats_year.html", &context)
+        .expect("Error rendering analytics template");
+    let output_path = input_dir().join(name);
+    write_file(&output_path, content);
+    output_path
+}
+
+#[derive(Debug, Clone, Serialize)]
+struct StatsYearLink {
+    year: u32,
+    href: String,
+}
+
+fn render_aggregated_analytics(tera: &Tera, analytics_pages: Vec<(u32, PathBuf)>) {
+    let css_path = css_path_for_output(input_dir());
+    let name = "stats.html";
+    let page_url = format!("{}/{}", BASE_URL, &name);
+
+    let mut complete_href = String::new();
+    let mut year_links: Vec<StatsYearLink> = Vec::new();
+
+    for (year, path) in &analytics_pages {
+        let href = relative_html_path(path);
+        if *year == 0 {
+            complete_href = href;
+        } else {
+            year_links.push(StatsYearLink { year: *year, href });
+        }
+    }
+
+    let mut context = Context::new();
+    context.insert("css_path", &css_path);
+    context.insert("base_url", BASE_URL);
+    context.insert("page_url", &page_url);
+    context.insert("complete_href", &complete_href);
+    context.insert("year_links", &year_links);
+
+    let content = tera
+        .render("stats_index.html", &context)
+        .expect("Error rendering analytics index template");
+    write_file(&input_dir().join(name), content);
 }
 
 // ============================================================

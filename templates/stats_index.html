@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Estadísticas — Bibliotek{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+<meta property="og:title" content="Estadísticas — Bibliotek">
+<meta property="og:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Estadísticas — Bibliotek">
+<meta name="twitter:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+<meta name="twitter:image" content="{{ base_url }}/assets/card.png">
+{% endblock %}
+
+{% block body %}
+<main>
+    <nav class="homie"><a href="{{ base_url }}/index.html">inicio</a></nav>
+    <section class="section-block">
+        <h1>Estadísticas</h1>
+        <p class="stats-subtitle">Mis hábitos lectores agregados o separados por año.</p>
+
+        <div class="stats-index-grid">
+            <a class="stats-index-card stats-index-card--featured" href="./{{ complete_href }}">Todos los años
+                agregados</a>
+            {% for link in year_links %}
+            <a class="stats-index-card" href="./{{ link.href }}">{{ link.year }}</a>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

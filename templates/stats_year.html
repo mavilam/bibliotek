@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Estadísticas — Bibliotek{% endblock %}
+{% block title %}Estadísticas {{ year }} — Bibliotek{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="Estadísticas de lectura de Miguel Ávila Monroy">
-    <meta property="og:title" content="Estadísticas — Bibliotek">
-    <meta property="og:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta name="description" content="Estadísticas de lectura de {{ year }} de Miguel Ávila Monroy">
+    <meta property="og:title" content="Estadísticas {{ year }} — Bibliotek">
+    <meta property="og:description" content="Estadísticas de lectura de {{ year }} de Miguel Ávila Monroy">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Estadísticas — Bibliotek">
-    <meta name="twitter:description" content="Estadísticas de lectura de Miguel Ávila Monroy">
+    <meta name="twitter:title" content="Estadísticas {{ year }} — Bibliotek">
+    <meta name="twitter:description" content="Estadísticas de lectura de {{ year }} de Miguel Ávila Monroy">
     <meta name="twitter:image" content="{{ base_url }}/assets/card.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
 {% endblock %}
@@ -18,20 +18,12 @@
         <div class="stats-main-content">
             <nav class="homie">
                 <a href="{{ base_url }}/index.html">inicio</a>
-                · <a href="{{ base_url }}/stats.html">estadísticas por año</a>
+                · <a href="{{ base_url }}/stats.html">estadísticas</a>
             </nav>
 
             <section class="page-header">
-                <h1>Estadísticas</h1>
-                <p class="stats-subtitle">He reseñado un total de {{ total_books }} libros entre {{ first_year }} y {{ last_year }}.</p>
-            </section>
-            <section class="suggestion-section">
-                <p>Si no sabes qué leer, podrías empezar por <a id="suggestion-link" href="#">…</a>.</p>
-            </section>
-            <!-- ── Books per year ────────────────────────────────────── -->
-            <section class="chart-section">
-                <h2>Libros por año</h2>
-                <div class="canvas-wrap"><canvas id="chart-per-year"></canvas></div>
+                <h1>Estadísticas {{ year }}</h1>
+                <p class="stats-subtitle">He reseñado un total de {{ total_books }} libros en {{ year }}.</p>
             </section>
 
             <!-- ── Publication decade ────────────────────────────────── -->
@@ -75,19 +67,6 @@
         </div>
 
     </main>
-    <!-- Separating scripts for better understanding -->
-    <!-- Suggestions -->
-    <script>
-    (function () {
-        const suggestions = {{ suggestion_list | json_encode() | safe }};
-        if (suggestions.length > 0) {
-            const [title, author, path] = suggestions[Math.floor(Math.random() * suggestions.length)];
-            const link = document.getElementById('suggestion-link');
-            link.href = path;
-            link.textContent = title + ' escrito por ' + author;
-        }
-    })();
-    </script>
     <!-- Charts -->
     <script>
     (function () {
@@ -108,48 +87,6 @@
         };
 
         const tickOpts = { color: MUTED };
-
-        // ── Books per year ──────────────────────────────────────
-        const perYearPages = {{ per_year_pages | json_encode() | safe }};
-        const perYearAvgs  = {{ per_year_avgs | json_encode() | safe }};
-        new Chart(document.getElementById('chart-per-year'), {
-            type: 'bar',
-            data: {
-                labels: {{ per_year_labels | json_encode() | safe }},
-                datasets: [{
-                    data: {{ per_year_counts | json_encode() | safe }},
-                    backgroundColor: TAGBG,
-                    hoverBackgroundColor: ACCENT,
-                    borderRadius: 3,
-                    borderSkipped: false,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                interaction: { mode: 'index', intersect: false },
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            label: (ctx) => ` ${ctx.parsed.y} libros · ${perYearPages[ctx.dataIndex]} págs · ✦ ${perYearAvgs[ctx.dataIndex]}`
-                        }
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: gridOpts,
-                        ticks: {
-                            ...tickOpts,
-                            callback: function (val, idx) {
-                                return [this.getLabelForValue(val), `${perYearPages[idx]} págs`];
-                            }
-                        }
-                    },
-                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
-                }
-            }
-        });
 
         // ── Publication decade ──────────────────────────────────
         new Chart(document.getElementById('chart-pub-decades'), {
