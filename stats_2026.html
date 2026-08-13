@@ -31,7 +31,7 @@
 
             <section class="page-header">
                 <h1>Estadísticas 2026</h1>
-                <p class="stats-subtitle">He reseñado un total de 26 libros en 2026.</p>
+                <p class="stats-subtitle">He reseñado un total de 27 libros en 2026.</p>
             </section>
 
             <!-- ── Publication decade ────────────────────────────────── -->
@@ -86,6 +86,19 @@
                     <li class="leaderboard__row">
                         <div class="leaderboard__header">
                             <span class="leaderboard__rank">3.</span>
+                            <span class="leaderboard__name">Miguel de Unamuno</span>
+                        </div>
+                        <div class="leaderboard__track">
+                            <div class="leaderboard__bar-wrap">
+                                <div class="leaderboard__bar" style="width: 50%"></div>
+                            </div>
+                            <span class="leaderboard__count">2</span>
+                        </div>
+                    </li>
+                    
+                    <li class="leaderboard__row">
+                        <div class="leaderboard__header">
+                            <span class="leaderboard__rank">4.</span>
                             <span class="leaderboard__name">Adrian Tomine</span>
                         </div>
                         <div class="leaderboard__track">
@@ -98,7 +111,7 @@
                     
                     <li class="leaderboard__row">
                         <div class="leaderboard__header">
-                            <span class="leaderboard__rank">4.</span>
+                            <span class="leaderboard__rank">5.</span>
                             <span class="leaderboard__name">Amélie Nothomb</span>
                         </div>
                         <div class="leaderboard__track">
@@ -111,7 +124,7 @@
                     
                     <li class="leaderboard__row">
                         <div class="leaderboard__header">
-                            <span class="leaderboard__rank">5.</span>
+                            <span class="leaderboard__rank">6.</span>
                             <span class="leaderboard__name">Annie Ernaux</span>
                         </div>
                         <div class="leaderboard__track">
@@ -124,7 +137,7 @@
                     
                     <li class="leaderboard__row">
                         <div class="leaderboard__header">
-                            <span class="leaderboard__rank">6.</span>
+                            <span class="leaderboard__rank">7.</span>
                             <span class="leaderboard__name">Antonio Tabucchi</span>
                         </div>
                         <div class="leaderboard__track">
@@ -137,7 +150,7 @@
                     
                     <li class="leaderboard__row">
                         <div class="leaderboard__header">
-                            <span class="leaderboard__rank">7.</span>
+                            <span class="leaderboard__rank">8.</span>
                             <span class="leaderboard__name">Anónimo</span>
                         </div>
                         <div class="leaderboard__track">
@@ -150,7 +163,7 @@
                     
                     <li class="leaderboard__row">
                         <div class="leaderboard__header">
-                            <span class="leaderboard__rank">8.</span>
+                            <span class="leaderboard__rank">9.</span>
                             <span class="leaderboard__name">Art Spiegelman</span>
                         </div>
                         <div class="leaderboard__track">
@@ -163,21 +176,8 @@
                     
                     <li class="leaderboard__row">
                         <div class="leaderboard__header">
-                            <span class="leaderboard__rank">9.</span>
-                            <span class="leaderboard__name">Cristina Peri Rossi</span>
-                        </div>
-                        <div class="leaderboard__track">
-                            <div class="leaderboard__bar-wrap">
-                                <div class="leaderboard__bar" style="width: 25%"></div>
-                            </div>
-                            <span class="leaderboard__count">1</span>
-                        </div>
-                    </li>
-                    
-                    <li class="leaderboard__row">
-                        <div class="leaderboard__header">
                             <span class="leaderboard__rank">10.</span>
-                            <span class="leaderboard__name">Delphine de Vigan</span>
+                            <span class="leaderboard__name">Cristina Peri Rossi</span>
                         </div>
                         <div class="leaderboard__track">
                             <div class="leaderboard__bar-wrap">
@@ -217,9 +217,9 @@
         new Chart(document.getElementById('chart-pub-decades'), {
             type: 'line',
             data: {
-                labels: ["220","1550","1870","1930","1940","1950","1980","1990","2000","2010","2020"],
+                labels: ["220","1550","1870","1920","1930","1940","1950","1980","1990","2000","2010","2020"],
                 datasets: [{
-                    data: [1,1,4,1,1,1,2,5,3,3,4],
+                    data: [1,1,4,1,1,1,1,2,5,3,3,4],
                     borderColor: ACCENT,
                     backgroundColor: TAGBG,
                     pointBackgroundColor: ACCENT,
@@ -254,7 +254,7 @@
                 labels: ['Novela', 'No ficción', 'Poesía', 'Relatos', 'Otros'],
                 datasets: [{
                     data: [
-                        19,
+                        20,
                         4,
                         1,
                         0,
@@ -289,7 +289,7 @@
             data: {
                 labels: ["biografía","latinoamérica","en inglés","cómic","memorias","italia","francia","no ficción","episodios nacionales","clásico","españa","novela"],
                 datasets: [{
-                    data: [1,2,2,2,3,3,3,4,4,5,9,19],
+                    data: [1,2,2,2,3,3,3,4,4,5,10,20],
                     backgroundColor: GREEN,
                     hoverBackgroundColor: MUTED,
                     borderRadius: 3,
