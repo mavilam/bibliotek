@@ -21,10 +21,10 @@
         #book-search {
             width: 100%;
             padding: 0.5em 0.75em;
-            background: var(--bg-surface);
-            border: 1px solid var(--tag-bg);
+            background: var(--bg-2);
+            border: 1px solid var(--ui);
             border-radius: 4px;
-            color: var(--txt-white);
+            color: var(--tx);
             font-family: inherit;
             font-size: var(--txt-small);
             outline: none;
@@ -32,11 +32,11 @@
         }
 
         #book-search::placeholder {
-            color: var(--txt-muted);
+            color: var(--tx-2);
         }
 
         #book-search:focus {
-            border-color: var(--txt-accent);
+            border-color: var(--accent);
         }
 
         .year-heading {
@@ -50,7 +50,7 @@
         .year-heading::before {
             content: '▾';
             font-size: 0.85em;
-            color: var(--txt-muted);
+            color: var(--tx-2);
             transition: transform 0.15s;
             display: inline-block;
             width: 0.9em;
@@ -69,7 +69,7 @@
         }
 
         #no-results {
-            color: var(--txt-muted);
+            color: var(--tx-2);
             font-style: italic;
             font-size: var(--txt-small);
             display: none;

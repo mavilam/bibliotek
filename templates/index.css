@@ -1,10 +1,33 @@
+/* ────────────────────────────────────────────────────────────────────────
+   Color system
+
+   THIS is where you change the site's theme. The rest of this file (and
+   the chart <script> blocks, which read these via getComputedStyle) only
+   ever uses var(--token) — never a hex literal directly.
+
+   Dark theme is the site's original hand-picked colors.
+
+   Light theme = Flexoki's own light theme tokens (https://stephango.com/flexoki),
+   since the original had no light mode to preserve. Its stats charts use
+   --syn-* — Flexoki's syntax-highlighting accent colors, at the 300
+   grade — since several chart categories need to be told apart at a
+   glance and the light theme has no equivalent to the dark theme's
+   original chart colors. 
+*/
+
 :root {
-    --txt-white:      #d4fff0;
-    --txt-muted:      #8abfb0;
-    --txt-accent:     #d4a017;
-    --bg-black:       #131414;
-    --bg-surface:     #1a1b1c;
-    --tag-bg:         #1e2e2a;
+    /* — Tokens (dark theme, default) — */
+    --bg:                   #131414;
+    --bg-2:                 #1a1b1c;
+    --ui:                   #1e2e2a;
+    --ui-2:                 #3c5750;
+    --ui-3:                 #3a4a46;
+    --tx-3:                 #648c81;
+    --tx-2:                 #8abfb0;
+    --tx:                   #d4fff0;
+    --accent:               #d4a017;
+    --accent-hover:         #e6b830;
+    --accent-2:             #2a6048;
 
     --txt-normal:     1.125rem;
     --txt-big:        1.5rem;
@@ -13,6 +36,56 @@
     --txt-title:      2rem;
 
     --content-width:  680px;
+}
+
+:root[data-theme="light"] {
+    /* — Tokens (light theme) — Flexoki's standard light palette. */
+    --bg:                   #FFFCF0;
+    --bg-2:                 #F2F0E5;
+    --ui:                   #E6E4D9;
+    --ui-2:                 #DAD8CE;
+    --ui-3:                 #CECDC3;
+    --tx-3:                 #B7B5AC;
+    --tx-2:                 #6F6E69;
+    --tx:                   #100F0F;
+    --accent:               #AD8301;
+    --accent-hover:         #8E6B01;
+    --accent-2:             #24837B;
+
+    /* Flexoki syntax-highlighting palette — 300 grade (light theme charts only) */
+    --syn-re:               #E8705F;
+    --syn-or:               #EC8B49;
+    --syn-ye:               #DFB431;
+    --syn-gr:               #A0AF54;
+    --syn-cy:               #5ABDAC;
+    --syn-bl:               #66A0C8;
+    --syn-pu:               #A699D0;
+    --syn-ma:               #E47DA8;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        --bg:               #FFFCF0;
+        --bg-2:             #F2F0E5;
+        --ui:               #E6E4D9;
+        --ui-2:             #DAD8CE;
+        --ui-3:             #CECDC3;
+        --tx-3:             #B7B5AC;
+        --tx-2:             #6F6E69;
+        --tx:               #100F0F;
+        --accent:           #AD8301;
+        --accent-hover:     #8E6B01;
+        --accent-2:         #24837B;
+
+        --syn-re:           #E8705F;
+        --syn-or:           #EC8B49;
+        --syn-ye:           #DFB431;
+        --syn-gr:           #A0AF54;
+        --syn-cy:           #5ABDAC;
+        --syn-bl:           #66A0C8;
+        --syn-pu:           #A699D0;
+        --syn-ma:           #E47DA8;
+    }
 }
 
 @font-face {
@@ -30,7 +103,8 @@
 
 html {
     font-size: 16px;
-    background-color: var(--bg-black);
+    background-color: var(--bg);
+    transition: background-color 0.2s ease;
 }
 
 body {
@@ -39,7 +113,34 @@ body {
     margin: 0 auto;
     padding: 3rem 1.5rem 5rem;
     line-height: 1.8;
-    color: var(--txt-white);
+    color: var(--tx);
+    transition: color 0.2s ease;
+}
+
+/* — Theme toggle — */
+
+.theme-toggle {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-2);
+    border: 1px solid var(--ui);
+    border-radius: 50%;
+    color: var(--tx);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.2s ease;
+    z-index: 10;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
 }
 
 /* — Headings — */
@@ -51,7 +152,7 @@ h1 {
     line-height: 1.3;
     margin-bottom: 0.25em;
     margin-top: 0.75em;
-    color: var(--txt-white);
+    color: var(--tx);
 }
 
 h2 {
@@ -59,7 +160,7 @@ h2 {
     font-weight: 400;
     margin-top: 1rem;
     margin-bottom: 0.75rem;
-    color: var(--txt-white);
+    color: var(--tx);
 }
 
 h3 {
@@ -67,7 +168,7 @@ h3 {
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
-    color: var(--txt-white);
+    color: var(--tx);
 }
 
 main {
@@ -98,7 +199,7 @@ main {
 }
 
 .section-topic {
-    color: var(--txt-muted);
+    color: var(--tx-2);
     font-size: var(--txt-small);
     margin-bottom: 0.5rem;
 }
@@ -112,7 +213,7 @@ main {
 .book-item {
     margin: 0;
     line-height: 1.45;
-    border-left: 2px solid var(--txt-accent);
+    border-left: 2px solid var(--accent);
     padding-left: 0.85rem;
 }
 
@@ -126,7 +227,7 @@ main {
 
 .book-author,
 .book-date {
-    color: var(--txt-muted);
+    color: var(--tx-2);
     font-size: var(--txt-small);
     font-style: italic;
 }
@@ -153,35 +254,35 @@ p {
 }
 
 a {
-    color: var(--txt-accent);
+    color: var(--accent);
     text-decoration: underline;
     text-decoration-skip-ink: auto;
     text-underline-offset: 0.15em;
 }
 
 a:hover {
-    color: #e6b830;
+    color: var(--accent-hover);
 }
 
 blockquote {
-    border-left: 3px solid var(--txt-accent);
+    border-left: 3px solid var(--accent);
     margin: 1.5rem 0;
     padding: 0.5rem 1.25rem;
-    color: var(--txt-muted);
+    color: var(--tx-2);
     font-style: italic;
 }
 
 /* — Review meta — */
 
 .meta {
-    color: var(--txt-muted);
+    color: var(--tx-2);
     font-size: var(--txt-small);
     margin-bottom: 1rem;
     line-height: 1.6;
 }
 
 .rating {
-    color: var(--txt-accent);
+    color: var(--accent);
     letter-spacing: 0.05em;
 }
 
@@ -193,8 +294,8 @@ blockquote {
 }
 
 .tags span {
-    background: var(--tag-bg);
-    color: var(--txt-muted);
+    background: var(--ui);
+    color: var(--tx-2);
     padding: 0.2em 0.6em;
     border-radius: 4px;
     font-size: 0.85rem;
@@ -223,7 +324,7 @@ blockquote {
 
 hr.review-divider {
     border: none;
-    border-top: 1px solid var(--tag-bg);
+    border-top: 1px solid var(--ui);
 }
 
 .footer {
@@ -232,7 +333,7 @@ hr.review-divider {
 
 .footer p {
     font-size: var(--txt-small);
-    color: var(--txt-muted);
+    color: var(--tx-2);
     font-style: italic;
     margin-bottom: 0;
 }
@@ -283,7 +384,7 @@ hr.review-divider {
 
 .leaderboard__name {
     font-size: var(--txt-small);
-    color: var(--txt-white);
+    color: var(--tx);
 }
 
 .leaderboard__track {
@@ -294,21 +395,21 @@ hr.review-divider {
 }
 
 .leaderboard__bar-wrap {
-    background-color: #1e2e2a;
+    background-color: var(--ui);
     border-radius: 2px;
     height: 6px;
 }
 
 .leaderboard__bar {
     height: 100%;
-    background-color: var(--txt-accent);
+    background-color: var(--accent);
     border-radius: 2px;
     min-width: 4px;
 }
 
 .leaderboard__count {
     font-size: var(--txt-tiny);
-    color: var(--txt-muted);
+    color: var(--tx-2);
     text-align: right;
     white-space: nowrap;
 }
@@ -327,10 +428,10 @@ hr.review-divider {
     align-items: center;
     justify-content: center;
     padding: 1.35rem 1rem;
-    background: var(--bg-surface);
-    border: 1px solid var(--tag-bg);
+    background: var(--bg-2);
+    border: 1px solid var(--ui);
     border-radius: 6px;
-    color: var(--txt-white);
+    color: var(--tx);
     font-size: var(--txt-big);
     text-decoration: none;
     text-align: center;
@@ -338,13 +439,13 @@ hr.review-divider {
 }
 
 .stats-index-card:hover {
-    border-color: var(--txt-accent);
-    color: var(--txt-accent);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .stats-index-card--featured {
     grid-column: 1 / -1;
-    background: var(--tag-bg);
+    background: var(--ui);
     font-family: 'Vercetti', Georgia, serif;
 }
 
@@ -367,5 +468,12 @@ hr.review-divider {
 
     h1 {
         font-size: 1.6rem;
+    }
+
+    .theme-toggle {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 2.25rem;
+        height: 2.25rem;
     }
 }

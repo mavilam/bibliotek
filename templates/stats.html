@@ -88,167 +88,221 @@
         }
     })();
     </script>
-    <!-- Charts -->
+    <!-- Charts — colors are read live from CSS tokens so they follow the theme toggle -->
     <script>
     (function () {
-        const ACCENT  = '#d4a017';
-        const MUTED   = '#8abfb0';
-        const SURFACE = '#1a1b1c';
-        const TAGBG   = '#1e2e2a';
-        const TEXT    = '#d4fff0';
-        const GREEN   = '#2a6048';
+        // ── Data (rendered once at build time) ───────────────────
+        const perYearPages    = {{ per_year_pages | json_encode() | safe }};
+        const perYearAvgs     = {{ per_year_avgs | json_encode() | safe }};
+        const perYearLabels   = {{ per_year_labels | json_encode() | safe }};
+        const perYearCounts   = {{ per_year_counts | json_encode() | safe }};
+        const pubDecadeLabels = {{ pub_decade_labels | json_encode() | safe }};
+        const pubDecadeCounts = {{ pub_decade_counts | json_encode() | safe }};
+        const typeCounts      = [
+            {{ types.novel }},
+            {{ types.non_fiction }},
+            {{ types.poetry }},
+            {{ types.short_stories }},
+            {{ types.other }}
+        ];
+        const tagLabels = {{ tag_labels | json_encode() | safe }};
+        const tagCounts = {{ tag_counts | json_encode() | safe }};
 
-        Chart.defaults.color = MUTED;
-        Chart.defaults.font.family = "Georgia, 'Times New Roman', serif";
-        Chart.defaults.font.size   = 12;
+        function isLightTheme() {
+            return document.documentElement.getAttribute('data-theme') === 'light';
+        }
 
-        const gridOpts = {
-            color: TAGBG,
-            drawBorder: false,
-        };
+        function themeColors() {
+            const s = getComputedStyle(document.documentElement);
+            const get = (name) => s.getPropertyValue(name).trim();
+            return {
+                bg: get('--bg'),
+                surface: get('--bg-2'),
+                ui: get('--ui'),
+                ui3: get('--ui-3'),
+                text: get('--tx'),
+                muted: get('--tx-2'),
+                accent: get('--accent'),
+                accent2: get('--accent-2'),
+                // Flexoki syntax-highlighting colors — light theme charts only.
+                synRe: get('--syn-re'),
+                synOr: get('--syn-or'),
+                synYe: get('--syn-ye'),
+                synGr: get('--syn-gr'),
+                synCy: get('--syn-cy'),
+                synBl: get('--syn-bl'),
+                synPu: get('--syn-pu'),
+                synMa: get('--syn-ma'),
+            };
+        }
 
-        const tickOpts = { color: MUTED };
+        let charts = [];
 
-        // ── Books per year ──────────────────────────────────────
-        const perYearPages = {{ per_year_pages | json_encode() | safe }};
-        const perYearAvgs  = {{ per_year_avgs | json_encode() | safe }};
-        new Chart(document.getElementById('chart-per-year'), {
-            type: 'bar',
-            data: {
-                labels: {{ per_year_labels | json_encode() | safe }},
-                datasets: [{
-                    data: {{ per_year_counts | json_encode() | safe }},
-                    backgroundColor: TAGBG,
-                    hoverBackgroundColor: ACCENT,
-                    borderRadius: 3,
-                    borderSkipped: false,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                interaction: { mode: 'index', intersect: false },
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            label: (ctx) => ` ${ctx.parsed.y} libros · ${perYearPages[ctx.dataIndex]} págs · ✦ ${perYearAvgs[ctx.dataIndex]}`
-                        }
-                    }
+        function destroyCharts() {
+            charts.forEach((c) => c.destroy());
+            charts = [];
+        }
+
+        function renderCharts() {
+            const c = themeColors();
+            const light = isLightTheme();
+
+            // Dark theme keeps the site's original chart colors. Light theme
+            // has no equivalent, so it uses Flexoki's syntax-highlighting set.
+            const typeColors = light
+                ? [c.synYe, c.synBl, c.synPu, c.synOr, c.synGr]
+                : [c.accent, c.accent2, c.muted, c.ui, c.ui3];
+            const tagsColor = light ? c.accent : c.accent2;
+            const tagsHoverColor = light ? c.synCy : c.muted;
+            const perYearColor = light ? c.accent : c.ui;
+            const perYearHoverColor = light ? c.ui : c.accent;
+
+            Chart.defaults.color = c.muted;
+            Chart.defaults.font.family = "Georgia, 'Times New Roman', serif";
+            Chart.defaults.font.size   = 12;
+
+            const gridOpts = { color: c.ui, drawBorder: false };
+            const tickOpts = { color: c.muted };
+
+            // ── Books per year ──────────────────────────────────
+            charts.push(new Chart(document.getElementById('chart-per-year'), {
+                type: 'bar',
+                data: {
+                    labels: perYearLabels,
+                    datasets: [{
+                        data: perYearCounts,
+                        backgroundColor: perYearColor,
+                        hoverBackgroundColor: perYearHoverColor,
+                        borderRadius: 3,
+                        borderSkipped: false,
+                    }]
                 },
-                scales: {
-                    x: {
-                        grid: gridOpts,
-                        ticks: {
-                            ...tickOpts,
-                            callback: function (val, idx) {
-                                return [this.getLabelForValue(val), `${perYearPages[idx]} págs`];
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => ` ${ctx.parsed.y} libros · ${perYearPages[ctx.dataIndex]} págs · ✦ ${perYearAvgs[ctx.dataIndex]}`
                             }
                         }
                     },
-                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
-                }
-            }
-        });
-
-        // ── Publication decade ──────────────────────────────────
-        new Chart(document.getElementById('chart-pub-decades'), {
-            type: 'line',
-            data: {
-                labels: {{ pub_decade_labels | json_encode() | safe }},
-                datasets: [{
-                    data: {{ pub_decade_counts | json_encode() | safe }},
-                    borderColor: ACCENT,
-                    backgroundColor: TAGBG,
-                    pointBackgroundColor: ACCENT,
-                    pointBorderColor: '#131414',
-                    pointBorderWidth: 2,
-                    pointRadius: 4,
-                    pointHoverRadius: 6,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: { label: (ctx) => ` ${ctx.parsed.y} libros` }
+                    scales: {
+                        x: {
+                            grid: gridOpts,
+                            ticks: {
+                                ...tickOpts,
+                                callback: function (val, idx) {
+                                    return [this.getLabelForValue(val), `${perYearPages[idx]} págs`];
+                                }
+                            }
+                        },
+                        y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
                     }
-                },
-                scales: {
-                    x: { grid: gridOpts, ticks: tickOpts },
-                    y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
                 }
-            }
-        });
+            }));
 
-        // ── Book types ──────────────────────────────────────────
-        new Chart(document.getElementById('chart-types'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Novela', 'No ficción', 'Poesía', 'Relatos', 'Otros'],
-                datasets: [{
-                    data: [
-                        {{ types.novel }},
-                        {{ types.non_fiction }},
-                        {{ types.poetry }},
-                        {{ types.short_stories }},
-                        {{ types.other }}
-                    ],
-                    backgroundColor: [ACCENT, GREEN, MUTED, TAGBG, '#3a4a46'],
-                    borderColor: SURFACE,
-                    borderWidth: 2,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: { position: 'bottom', labels: { color: TEXT } },
-                    tooltip: {
-                        callbacks: {
-                            label: (ctx) => {
-                                const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
-                                const pct = total ? Math.round((ctx.parsed / total) * 100) : 0;
-                                return ` ${ctx.label}: ${ctx.parsed} (${pct}%)`;
+            // ── Publication decade ──────────────────────────────
+            charts.push(new Chart(document.getElementById('chart-pub-decades'), {
+                type: 'line',
+                data: {
+                    labels: pubDecadeLabels,
+                    datasets: [{
+                        data: pubDecadeCounts,
+                        borderColor: c.accent,
+                        backgroundColor: c.ui,
+                        pointBackgroundColor: c.accent,
+                        pointBorderColor: c.bg,
+                        pointBorderWidth: 2,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        fill: true,
+                        tension: 0.3,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: { label: (ctx) => ` ${ctx.parsed.y} libros` }
+                        }
+                    },
+                    scales: {
+                        x: { grid: gridOpts, ticks: tickOpts },
+                        y: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true }
+                    }
+                }
+            }));
+
+            // ── Book types ────────────────────────────────────────
+            charts.push(new Chart(document.getElementById('chart-types'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Novela', 'No ficción', 'Poesía', 'Relatos', 'Otros'],
+                    datasets: [{
+                        data: typeCounts,
+                        backgroundColor: typeColors,
+                        borderColor: c.surface,
+                        borderWidth: 2,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: c.text } },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => {
+                                    const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                                    const pct = total ? Math.round((ctx.parsed / total) * 100) : 0;
+                                    return ` ${ctx.label}: ${ctx.parsed} (${pct}%)`;
+                                }
                             }
                         }
                     }
                 }
-            }
-        });
+            }));
 
-        // ── Top tags ────────────────────────────────────────────
-        new Chart(document.getElementById('chart-tags'), {
-            type: 'bar',
-            data: {
-                labels: {{ tag_labels | json_encode() | safe }},
-                datasets: [{
-                    data: {{ tag_counts | json_encode() | safe }},
-                    backgroundColor: GREEN,
-                    hoverBackgroundColor: MUTED,
-                    borderRadius: 3,
-                    borderSkipped: false,
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: { label: (ctx) => ` ${ctx.parsed.x} libros` }
-                    }
+            // ── Top tags ──────────────────────────────────────────
+            charts.push(new Chart(document.getElementById('chart-tags'), {
+                type: 'bar',
+                data: {
+                    labels: tagLabels,
+                    datasets: [{
+                        data: tagCounts,
+                        backgroundColor: tagsColor,
+                        hoverBackgroundColor: tagsHoverColor,
+                        borderRadius: 3,
+                        borderSkipped: false,
+                    }]
                 },
-                scales: {
-                    x: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true },
-                    y: { grid: { display: false }, ticks: tickOpts }
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: { label: (ctx) => ` ${ctx.parsed.x} libros` }
+                        }
+                    },
+                    scales: {
+                        x: { grid: gridOpts, ticks: { ...tickOpts, precision: 0 }, beginAtZero: true },
+                        y: { grid: { display: false }, ticks: tickOpts }
+                    }
                 }
-            }
+            }));
+        }
+
+        renderCharts();
+        document.addEventListener('themechange', () => {
+            destroyCharts();
+            renderCharts();
         });
     })();
     </script>
