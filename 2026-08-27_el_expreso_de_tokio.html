@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El expreso de Tokio — Bibliotek</title>
+    
+    <meta name="description" content="Seichō Matsumoto · 1958">
+    <meta property="og:title" content="El expreso de Tokio — Bibliotek">
+    <meta property="og:description" content="Seichō Matsumoto · 1958">
+
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek&#x2F;2026-08-27_el_expreso_de_tokio.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema"></button>
+    
+    <article>
+        <nav class="homie"><a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/index.html">inicio</a></nav>
+        <h1>El expreso de Tokio</h1>
+        <div class="meta">
+            <span>Seichō Matsumoto</span>
+            <span>1958</span>
+            <span class="rating">✦✦✦✧✧</span>
+            <p class="date-read">Leído el 2026-08-27</p>
+            <div class="tags">
+                
+                <span>novela</span>
+                
+                <span>japón</span>
+                
+            </div>
+        </div>
+        <hr class="review-divider">
+        <div class="content">
+            <p>Siguiendo con mi aventura por la literatura japonesa, llegué a <em>El expreso de Tokio</em>, una novela de detectives al más puro estilo Hercule Poirot. La historia arranca con dos cadáveres en una playa de Kyūshū, un escenario que a simple vista parece un suicidio doble por amor. Sin embargo, bajo esa fachada de caso fácil, los inspectores Mihara y Tsubouchi empiezan a atar cabos sin más base que su instinto, cambiando la dirección de la investigación por completo.</p>
+<p>La novela tiene una clara inspiración en la narrativa de Agatha Christie, principalmente en la minuciosidad de los detalles, en la atención a sucesos imperceptibles para el ojo común y en la forma de llevar al lector hacia el desenlace. Matsumoto coge esa estructura del enigma occidental y la llena de elementos del Japón tras la Segunda Guerra Mundial: la corrupción ministerial se convierte en el motor del caso y la estricta puntualidad de los trenes pasa a ser la herramienta clave para encajar el crimen.</p>
+<p>La historia mantiene el interés, incluso cuando coloca señales desde el inicio para sospechar del culpable, aunque sin ofrecer un camino claro para confirmar su autoría hasta el final. Sin embargo, a mi juicio, el libro flojea en su desarrollo. Existe una tendencia a sobreexplicar las mismas ideas y los mismos esquemas una y otra vez, lo que ralentiza el avance. Además, el mayor problema de ritmo está en cómo avanza la investigación en tramos críticos: en lugar de mostrar la acción sobre el terreno y dejar que el lector interprete los hechos, la trama da un salto gigante a través de dos cartas que se intercambian los detectives, entregando el caso resuelto de forma excesivamente masticada.</p>
+<p>Con todo y con eso, la novela cumple su cometido como una lectura ligera y como un ingenioso puzzle detectivesco que destaca más por su precisión milimétrica que por el ritmo de la acción.</p>
+
+        </div>
+    </article>
+
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById('theme-toggle');
+
+            function currentTheme() {
+                return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            }
+
+            function applyIcon(theme) {
+                btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+
+            applyIcon(currentTheme());
+
+            btn.addEventListener('click', function () {
+                var next = currentTheme() === 'light' ? 'dark' : 'light';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                applyIcon(next);
+                document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
+            });
+        })();
+    </script>
+</body>
+</html>

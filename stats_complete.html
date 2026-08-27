@@ -41,7 +41,7 @@
 
             <section class="page-header">
                 <h1>Estadísticas</h1>
-                <p class="stats-subtitle">He reseñado un total de 151 libros entre 2023 y 2026.</p>
+                <p class="stats-subtitle">He reseñado un total de 152 libros entre 2023 y 2026.</p>
             </section>
             <section class="suggestion-section">
                 <p>Si no sabes qué leer, podrías empezar por <a id="suggestion-link" href="#">…</a>.</p>
@@ -227,21 +227,21 @@
     <script>
     (function () {
         // ── Data (rendered once at build time) ───────────────────
-        const perYearPages    = [11790,9041,7760,5155];
-        const perYearAvgs     = ["3.75","3.31","3.44","3.67"];
+        const perYearPages    = [11790,9041,7760,5369];
+        const perYearAvgs     = ["3.75","3.31","3.44","3.64"];
         const perYearLabels   = ["2023","2024","2025","2026"];
-        const perYearCounts   = [40,36,36,27];
+        const perYearCounts   = [40,36,36,28];
         const pubDecadeLabels = ["1550","1860","1870","1880","1910","1920","1930","1940","1950","1960","1970","1980","1990","2000","2010","2020"];
-        const pubDecadeCounts = [1,1,6,3,2,4,7,7,5,6,4,8,17,12,32,36];
+        const pubDecadeCounts = [1,1,6,3,2,4,7,7,6,6,4,8,17,12,32,36];
         const typeCounts      = [
-            95,
+            96,
             41,
             1,
             7,
             0
         ];
         const tagLabels = ["cómic","clásico","italia","en inglés","chile","francia","clásicos","memorias","estados unidos","españa","no ficción","novela"];
-        const tagCounts = [8,9,10,10,12,14,16,17,21,36,42,95];
+        const tagCounts = [8,9,10,10,12,14,16,17,21,36,42,96];
 
         function isLightTheme() {
             return document.documentElement.getAttribute('data-theme') === 'light';
