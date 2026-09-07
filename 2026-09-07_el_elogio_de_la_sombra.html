@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El elogio de la sombra — Bibliotek</title>
+    
+    <meta name="description" content="Junichirō Tanizaki · 1933">
+    <meta property="og:title" content="El elogio de la sombra — Bibliotek">
+    <meta property="og:description" content="Junichirō Tanizaki · 1933">
+
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek&#x2F;2026-09-07_el_elogio_de_la_sombra.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema"></button>
+    
+    <article>
+        <nav class="homie"><a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/index.html">inicio</a></nav>
+        <h1>El elogio de la sombra</h1>
+        <div class="meta">
+            <span>Junichirō Tanizaki</span>
+            <span>1933</span>
+            <span class="rating">✦✦✦✦✧</span>
+            <p class="date-read">Leído el 2026-09-07</p>
+            <div class="tags">
+                
+                <span>no ficción</span>
+                
+            </div>
+        </div>
+        <hr class="review-divider">
+        <div class="content">
+            <p>En <em>Elogio de la sombra</em>, Junichirō Tanizaki desarrolla la diferencia estética que ha existido siempre entre Oriente y Occidente. Mientras que la tradición occidental alumbra la belleza a través de la luz directa, lo brillante y la exposición total, la tradición japonesa encuentra lo bello en la penumbra, lo sutil y el sabio arte de ocultar para resaltar lo importante.</p>
+<p>El ensayo parte de una experiencia cotidiana propia: la reforma de una casa tradicional japonesa. Intentando integrar comodidades modernas, como la luz eléctrica o los baños con azulejos y un váter de porcelana blanca, sin destruir el espíritu del espacio, Tanizaki empieza a analizar la arquitectura tradicional y cómo se contrapone a los avances que vienen de Occidente. Así empieza a describir elementos domésticos que han formado parte desde siempre de la tradición japonesa como los <em>shōji</em> (paneles de madera y papel que filtran la claridad exterior) y el <em>tokonoma</em> (altares con pinturas que se rodean de sombra en el salón), demostrando cómo el hogar japonés no busca reflejar el brillo, sino acoger y jugar con la sombra.</p>
+<p>Poco a poco, el autor extiende esta filosofía mucho más allá de la arquitectura. La sombra es parte de toda la vida tradicional: desde la gastronomía, donde se usan utensilios de vajilla lacada y se iluminan las cenas con velas, pasando por las marionetas y las vestimentas en el teatro, hasta llegar a la indumentaria y el maquillaje femenino, donde las mujeres se escondían en un traje negro que resaltaba únicamente su cara. Frente a la fascinación occidental por lo reluciente y lo desinfectado, Tanizaki contrapone el valor de la pátina, el desgaste y las huellas que el tiempo deja sobre los objetos.</p>
+<p>Me gustó especialmente el pasaje donde comenta que los orientales, y especialmente los japoneses, han ido incluyendo objetos creados por Occidente en su día a día, pero que si estos objetos fueran de creación oriental, funcionarían de manera muy distinta. Menciona el bolígrafo, ya que la escritura oriental está más diseñada para un pincel, o la radio, que está orientada a no parar de emitir sonidos, cuando en las historias orientales el silencio es incluso más importante.</p>
+<p>Para cerrar, Tanizaki deja claro que la obra no es un rechazo ciego al progreso, sino un texto melancólico, una manera de recordar y de no olvidar que, al empeñarnos en iluminar cada rincón del mundo moderno, hemos sacrificado la riqueza de los matices. Y para los occidentales es una manera perfecta de empezar a entender que en Oriente tienen otras maneras de concebir la realidad que a nuestra comprensión, quizá demasiado iluminada, a veces puede costarle entender.</p>
+
+        </div>
+    </article>
+
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById('theme-toggle');
+
+            function currentTheme() {
+                return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            }
+
+            function applyIcon(theme) {
+                btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+
+            applyIcon(currentTheme());
+
+            btn.addEventListener('click', function () {
+                var next = currentTheme() === 'light' ? 'dark' : 'light';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                applyIcon(next);
+                document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
+            });
+        })();
+    </script>
+</body>
+</html>
