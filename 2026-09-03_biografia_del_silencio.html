@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía del silencio — Bibliotek</title>
+    
+    <meta name="description" content="Pablo d&#x27;Ors · 2012">
+    <meta property="og:title" content="Biografía del silencio — Bibliotek">
+    <meta property="og:description" content="Pablo d&#x27;Ors · 2012">
+
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek&#x2F;2026-09-03_biografia_del_silencio.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema"></button>
+    
+    <article>
+        <nav class="homie"><a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/index.html">inicio</a></nav>
+        <h1>Biografía del silencio</h1>
+        <div class="meta">
+            <span>Pablo d&#x27;Ors</span>
+            <span>2012</span>
+            <span class="rating">✦✦✦✦✧</span>
+            <p class="date-read">Leído el 2026-09-03</p>
+            <div class="tags">
+                
+                <span>no ficción</span>
+                
+                <span>españa</span>
+                
+            </div>
+        </div>
+        <hr class="review-divider">
+        <div class="content">
+            <p>Hace algo menos de un año empecé a intentar meditar. Y digo intentar porque, después de leer <em>Biografía del silencio</em>, creo que no he llegado al punto de considerar mi práctica como meditación. El objetivo de mi práctica ha sido dejar pasar mis pensamientos, no intentar acallarlos, sino dejar que fluyeran hacia otro sitio; así, al dejar de pensar en preocupaciones, mi mente descansaba e incluso desaparecían.</p>
+<p>Pablo d'Ors en su libro relata lo que ocurre cuando decidimos sentarnos en silencio, parar el ruido cotidiano y enfrentarnos a nosotros mismos. A través de un ensayo breve, el autor plantea que la meditación no es una huida de la realidad, sino una forma de desnudarse ante ella para aprender a conocerse. Es decir, la meditación es un medio en el que te aíslas del ruido no solo para dejar pasar tus pensamientos y descansar, sino para percibirlos de una manera más lenta y poder analizarlos con más conocimiento después. Mientras se intenta mantener la mente en el ancla sin engancharse al torbellino de pensamientos, el silencio actúa como un espejo donde uno se hace consciente de sus defectos; la repetición constante de las obsesiones y malestares del meditador termina por revelarle cómo funciona su mente.</p>
+<p>El resultado de su proceso de meditación es una manera de vivir una buena vida: una donde el ego no tiene lugar, donde seamos conscientes de lo pequeños que somos, donde la atención tiene un papel principal. Me pareció interesante cómo me reconocía en una serie de valores que él le otorga a la meditación cuando yo creo que los adopté después de la lectura y la reflexión; sabiendo que el autor es escritor y un ávido lector, creo que su credo vital viene de una suma de su bagaje intelectual y su práctica de la meditación.</p>
+<p>Sin embargo, mi lectura no ha estado libre de fricciones. Aunque el tono predominante es cercano y pragmático, casi como un manual, existen pasajes donde el autor peca de un lirismo excesivo que le resta potencia al resultado de su práctica; parecería que llega a las conclusiones por arte de magia, cuando no es así. Por otro lado, resulta especialmente llamativo el momento en que d'Ors, siendo sacerdote católico, muestra una vulnerabilidad tan terrenal al admitir abiertamente el deseo de compañía femenina o el de la paternidad. ¿Es un anhelo real o solo es un artefacto poético?</p>
+<p><em>Biografía del silencio</em> no es un libro impecable ni pretende sentar cátedra, pero es un texto interesante para quien busque entender el sentido de la práctica contemplativa. Pero además no es únicamente eso: d'Ors se abre para exponer no solo su práctica, sino su manera de vivir con virtud una buena vida.</p>
+
+        </div>
+    </article>
+
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById('theme-toggle');
+
+            function currentTheme() {
+                return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            }
+
+            function applyIcon(theme) {
+                btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+
+            applyIcon(currentTheme());
+
+            btn.addEventListener('click', function () {
+                var next = currentTheme() === 'light' ? 'dark' : 'light';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                applyIcon(next);
+                document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
+            });
+        })();
+    </script>
+</body>
+</html>
