@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de especulaciones — Bibliotek</title>
+    
+    <meta name="description" content="Jenny Offill · 2014">
+    <meta property="og:title" content="Departamento de especulaciones — Bibliotek">
+    <meta property="og:description" content="Jenny Offill · 2014">
+
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek&#x2F;2026-09-27_departamento_de_especulaciones.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema"></button>
+    
+    <article>
+        <nav class="homie"><a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/index.html">inicio</a></nav>
+        <h1>Departamento de especulaciones</h1>
+        <div class="meta">
+            <span>Jenny Offill</span>
+            <span>2014</span>
+            <span class="rating">✦✦✧✧✧</span>
+            <p class="date-read">Leído el 2026-09-27</p>
+            <div class="tags">
+                
+                <span>novela</span>
+                
+                <span>estados unidos</span>
+                
+            </div>
+        </div>
+        <hr class="review-divider">
+        <div class="content">
+            <p>Necesitaba leer algo ligero, algo que cambiara el tono de mis últimas lecturas, y <em>Departamento de especulaciones</em> estaba en mi lista de libros con tintes de <em>Intermezzo</em> de Sally Rooney. La novela (¿es una novela?) tiene 170 páginas, así que era perfecta para leerla en un viaje en avión de dos horas y media.</p>
+<p>Offill cuenta la historia de una mujer desde su juventud, pasando por cómo conoció a su marido, el nacimiento de su hija, su crisis de pareja y cómo intenta recomponer sus piezas. De camino por ese viaje también hay espacio para sus anhelos profesionales, su intento de escritura y, sobre todo, su proceso mental, que va desde el enamoramiento al desquiciamiento pasando por la depresión. Las páginas están llenas de rabia, ternura, sinceridad y demasiada concisión. La protagonista cuenta la historia en una especie de diario que desborda honestidad hacia sí misma y hacia todo el que la rodea; no duda en decir que odia a alguien o que piensa que es una mala esposa.</p>
+<p>El estilo de escritura es peculiar. El libro está compuesto de fragmentos que, al unirse, permiten que tu mente rellene los grandes huecos que hay entre cada uno para elaborar una historia. En los momentos en que el sentir de la protagonista se queda un poco plano, hay una cita de alguien de renombre, desde Rilke hasta Einstein, para empujar el texto hacia alguna dirección. Y este creo que ha sido su mayor problema para mí. Entiendo el ejercicio de estilo, me gustan las elipsis, pero me parece que demasiadas partes del libro están cerca de una recopilación de diarios, citas subrayadas y <em>post-its</em>, más que de un proceso de elaboración de una trama.</p>
+<p>Entiendo que lo que vive y describe la protagonista es muy contemporáneo. Puedo ver a mucha gente sintiéndose reflejada en lo que describe; yo mismo lo he sentido en ciertas escenas. Así que, si sumas esta empatía con un estilo fragmentado que no tiene necesidad de encajar ninguna trama de más de diez líneas, queda un libro muy subrayable.</p>
+<p>Acabo el libro con sentimientos encontrados. Hay partes que me han gustado mucho, que me han parecido muy ingeniosas y, de nuevo, de una honestidad enorme. Pero me han pesado mucho otras partes y el sentir que, más que una novela, es un collage de muchos apuntes a medio terminar.</p>
+
+        </div>
+    </article>
+
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById('theme-toggle');
+
+            function currentTheme() {
+                return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            }
+
+            function applyIcon(theme) {
+                btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+
+            applyIcon(currentTheme());
+
+            btn.addEventListener('click', function () {
+                var next = currentTheme() === 'light' ? 'dark' : 'light';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                applyIcon(next);
+                document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
+            });
+        })();
+    </script>
+</body>
+</html>
