@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokio Blues — Bibliotek</title>
+    
+    <meta name="description" content="Haruki Murakami · 1987">
+    <meta property="og:title" content="Tokio Blues — Bibliotek">
+    <meta property="og:description" content="Haruki Murakami · 1987">
+
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/assets/card.png">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek&#x2F;2026-11-06_tokio_blues.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔖</text></svg>">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema"></button>
+    
+    <article>
+        <nav class="homie"><a href="https:&#x2F;&#x2F;mavilam.github.io&#x2F;bibliotek/index.html">inicio</a></nav>
+        <h1>Tokio Blues</h1>
+        <div class="meta">
+            <span>Haruki Murakami</span>
+            <span>1987</span>
+            <span class="rating">✦✦✦✧✧</span>
+            <p class="date-read">Leído el 2026-10-29</p>
+            <div class="tags">
+                
+                <span>novela</span>
+                
+            </div>
+        </div>
+        <hr class="review-divider">
+        <div class="content">
+            <p>Cogí <em>Tokio Blues</em> de la estantería de mi hermano. Hacía años que no leía a Murakami, un autor que empecé amando pero cuya ilusión por leerle se fue vaciando según leía más obras suyas. Pienso que hay lecturas que tienes que atacar en momentos concretos de tu vida, y preparando mi viaje a Japón pensé que era el momento adecuado.</p>
+<p>Watanabe es un estudiante universitario de dieciocho años que se instala en el Tokio de finales de los sesenta tratando de rehacer su vida tras el suicidio de Kizuki, su mejor amigo de la adolescencia. Esa sombra de duelo no resuelto reaparece cuando coincide casualmente con Naoko, la novia de Kizuki. A partir de ese encuentro, la novela hila el crecimiento de Watanabe entre la atracción melancólica y destructiva hacia una Naoko consumida por la depresión, y la vitalidad de Midori, una compañera de clase, directa y llena de fuerza. Pongo a Watanabe en el centro porque el libro está escribo en primera persona, pero el resto de personajes también tendrán sus demonios y serán parte crucial del libro.</p>
+<p>A diferencia de los últimos libros que leí del autor, este no tiene un componente onírico central; de esa manera el texto resulta mucho más accesible. A su vez, tiene un corte más cercano a la tradición japonesa del siglo XX: poca trama exterior y un peso absoluto en los cambios internos de los personajes. Es indudable que Murakami es capaz de generar una atmósfera envolvente en la que, si entras, disfrutas aunque no haya giros de guion ni una trama principal.</p>
+<p>Aquí lo consigue con su reconocible sello posmoderno y occidentalizado: suenan The Beatles, Bill Evans o Miles Davis, y los personajes leen a F. Scott Fitzgerald o <em>La montaña mágica</em> de Thomas Mann. De esta manera, Watanabe encarna al arquetipo masculino clásico de Murakami: un tipo introvertido, sin un propósito vital claro pero con sensibilidad artística, pasivo ante el mundo pero extrañamente atractivo para las mujeres que lo rodean. Por otra parte, Midori y Reiko, cada una a su estilo, cumplen el patrón femenino del autor: mujeres de sexualidad explícita que terminan orbitando al protagonista. En especial con Midori, cuesta no sentir que está construida desde una mirada masculina: sus comentarios sexuales continuos y su manera directa de comportarse parecen mas a una fantasía del escritor que a una mujer real.</p>
+<p>Con todo y con eso, entré en el juego. La habilidad de Murakami para conectar personajes a través de conversaciones cotidianas y aparentemente triviales, silencios incluidos, sigue siendo su mayor virtud.</p>
+<p>Donde la novela gana solidez es en cómo aborda la salud mental, alejándose de soluciones fáciles. La novela trata la depresión y el suicidio de frente. Y, en realidad, este es el núcleo del libro: Watanabe, Naoko, Reiko y Midori tienen cada uno sus propios demonios, y cada cual lidia con ellos a su manera.</p>
+<p>La novela cierra con algunos de estos problemas resueltos de forma definitiva, pero la mayoría solo entran en una pausa temporal. Este tipo de conflictos no se resuelven con un interruptor: requieren un trabajo constante y una autoconsciencia que los personajes solo alcanzan cuando conversan entre ellos.</p>
+<p>He disfrutado con la lectura, y me hizo una ilusión absurda ver que Midori vivía cerca de Ōtsuka la parada de metro de la Yamanote line que cogíamos todos los días en nuestra estancia en Tokio. Quizá sea la puerta a disfrutar al bueno de Haruki de nuevo.</p>
+
+        </div>
+    </article>
+
+    <hr class="review-divider">
+    <footer class="footer">
+        <p>A no ser que se indique, todo el contenido de estas reseñas está escrito por un humano (yo mismo).</p>
+    </footer>
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById('theme-toggle');
+
+            function currentTheme() {
+                return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            }
+
+            function applyIcon(theme) {
+                btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+
+            applyIcon(currentTheme());
+
+            btn.addEventListener('click', function () {
+                var next = currentTheme() === 'light' ? 'dark' : 'light';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                applyIcon(next);
+                document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
+            });
+        })();
+    </script>
+</body>
+</html>
